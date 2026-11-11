@@ -1,0 +1,17 @@
+{
+  "handover_gap_m": null,
+  "lateral_tolerance_m": null,
+  "camera_edge_margin_px": 8,
+  "plate_front_offset_m": null,
+  "box_surface_to_rear_face_m": null,
+  "max_contact_gap_m": null,
+  "lift_after_push_m": null,
+  "push_distance_m": 0.1,
+  "segment_m": 0.002,
+  "contact_geometry_verified": false,
+  "full_stroke_verified": false,
+  "lift_and_return_clearance_verified": false,
+  "vertical_tolerance_m": null,
+  "box_surface_to_contact_z_m": null,
+  "plate_tcp_to_contact_z_m": null
+}

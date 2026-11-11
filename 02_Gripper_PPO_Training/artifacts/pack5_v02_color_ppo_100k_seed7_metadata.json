@@ -1,0 +1,198 @@
+{
+  "environment_id": "CR10-2F85-RGBDColorTargetPush-v0",
+  "algorithm": "PPO",
+  "policy": "MlpPolicy over compact RGB-D-derived features",
+  "perception": "128x72 RGB HSV masks plus aligned metric-depth back-projection; raw images are not sent to PPO",
+  "action": "bounded [TCP forward, TCP lateral] increment with 2 mm maximum Euclidean step and fixed closed gripper",
+  "seed": 7,
+  "training_timesteps": 100000,
+  "evaluation_episodes": 8,
+  "evaluation_successes": 8,
+  "episodes": [
+    {
+      "episode": 1,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 44,
+      "target_progress_m": 0.04016482018702958,
+      "wrong_cube_displacement_m": 1.6461764716131752e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.6837498471987519,
+          0.0627138540148735
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.04037280706362063,
+      "wrong_cube_displacement_m": 9.357932639460789e-20,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.6316794753074646,
+          0.9143465044705764,
+          1.0
+        ],
+        [
+          -0.032358087599277496,
+          0.5284067912675117,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 3,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 43,
+      "target_progress_m": 0.0407672973218997,
+      "wrong_cube_displacement_m": 6.830607766029773e-22,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.20122408866882324,
+          0.6764836768771327,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 4,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 43,
+      "target_progress_m": 0.04053514939410135,
+      "wrong_cube_displacement_m": 1.6476148668580777e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.6373842252894889,
+          -0.05777598172426224
+        ]
+      ]
+    },
+    {
+      "episode": 5,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 45,
+      "target_progress_m": 0.04078783546518321,
+      "wrong_cube_displacement_m": 1.5027337085265499e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.7221951494200363,
+          0.014718970283865929
+        ]
+      ]
+    },
+    {
+      "episode": 6,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.04062733538831647,
+      "wrong_cube_displacement_m": 3.278691727694291e-20,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.6338284611701965,
+          0.9146822263365206,
+          1.0
+        ],
+        [
+          -0.03344752639532089,
+          0.5236205564325919,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 7,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 44,
+      "target_progress_m": 0.04065355569022899,
+      "wrong_cube_displacement_m": 1.2090175745872698e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.2693414092063904,
+          0.749265848912976,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 8,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 43,
+      "target_progress_m": 0.0408428921779313,
+      "wrong_cube_displacement_m": 1.140711496926972e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.6232292808072512,
+          -0.059461601078510284
+        ]
+      ]
+    }
+  ],
+  "versions": {
+    "stable_baselines3": "2.7.1",
+    "gymnasium": "1.2.2",
+    "mujoco": "3.11.0",
+    "numpy": "2.2.6",
+    "torch": "2.7.1"
+  },
+  "hardware_motion_commanded": false,
+  "claim_boundary": "Simulation baseline only. This does not establish policy quality, physical color/depth robustness, hardware safety, or sim-to-real transfer."
+}

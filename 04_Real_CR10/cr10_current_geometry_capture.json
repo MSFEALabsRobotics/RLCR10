@@ -1,0 +1,46 @@
+{
+  "robot_mode": 4,
+  "flange_pose_mm_deg": [
+    166.3873,
+    620.8749,
+    -58.2605,
+    88.4872,
+    3.5857,
+    -173.5129
+  ],
+  "joints_deg": [
+    91.0986,
+    -42.3739,
+    -128.0938,
+    -8.2393,
+    -95.4286,
+    356.4179
+  ],
+  "detections": {
+    "red": {
+      "optical_point_m": [
+        -0.045235875993967056,
+        0.07309292256832123,
+        0.2133999913930893
+      ],
+      "depth_m": 0.2133999913930893,
+      "pixels": 271
+    },
+    "blue": {
+      "optical_point_m": [
+        0.09506469964981079,
+        0.0824814960360527,
+        0.19519999623298645
+      ],
+      "depth_m": 0.19519999623298645,
+      "pixels": 321
+    }
+  },
+  "geometry": {
+    "box_width_m": 0.1,
+    "box_height_m": 0.14,
+    "approx_home_plate_to_box_face_m": 0.28,
+    "fixed_push_m": 0.1,
+    "camera_body_projects_beyond_plate_m_approx": 0.08
+  }
+}

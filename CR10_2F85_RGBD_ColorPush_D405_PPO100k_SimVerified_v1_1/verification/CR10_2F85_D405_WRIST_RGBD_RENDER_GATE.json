@@ -1,0 +1,160 @@
+{
+  "verification_level": "CR10_2F85_D405_WRIST_RGBD_RENDER_GATE",
+  "pack4_regression_level": "CR10_2F85_GYMNASIUM_FORWARD_ONLY_FIXED_GRIP_PUSH_BASELINE",
+  "camera": {
+    "model": "RealSense D405",
+    "name": "d405_aligned_rgbd",
+    "stream_convention": "depth_aligned_to_color",
+    "native_resolution_px": [
+      1280,
+      720
+    ],
+    "preview_resolution_px": [
+      128,
+      72
+    ],
+    "camera_matrix_px": [
+      [
+        674.4192801798159,
+        0.0,
+        640.0
+      ],
+      [
+        0.0,
+        649.4571918977125,
+        360.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "principal_point_convention": "OPEN_CV_ABSOLUTE_PIXEL_COORDINATES_FROM_IMAGE_TOP_LEFT; build_model.py converts once to MuJoCo 3.11 sensor-center offsets",
+    "compiled_mujoco_principal_offset_px": [
+      0.0,
+      0.0
+    ],
+    "compiled_raster_optical_axis_px": [
+      640.0,
+      360.0
+    ],
+    "compiled_intrinsic_max_error_px": 5.630737803130614e-05,
+    "offscreen_framebuffer_px": [
+      1280,
+      720
+    ],
+    "optical_center_xyz_m_in_mount_frame": [
+      0.0,
+      -0.1,
+      0.03
+    ],
+    "initial_cube_center_pixel": [
+      639.9999654062609,
+      360.28071264866173
+    ],
+    "initial_cube_center_depth_m": 0.2227612057560519,
+    "mount_status": "PROVISIONAL_WRIST_EXTRINSIC: the D405 optical center is offset 100 mm along mount -Y and 30 mm along mount +Z toward the gripper, aimed at the initial cube center. Replace this one transform after physical measurement; it is not a hand-eye calibration claim.",
+    "intrinsics_status": "NOMINAL_D405_FOV_DERIVED_NOT_DEVICE_CALIBRATED",
+    "intrinsics_source": "Nominal 1280x720 pinhole matrix derived from the D405 published 87 x 58 degree field of view with a centered principal point: fx=674.4192801798159, fy=649.4571918977125, cx=640, cy=360 pixels. Replace with the physical D405 depth-aligned-to-color CameraInfo/intrinsics before hardware use.",
+    "nominal_field_of_view_deg": [
+      87.0,
+      58.0
+    ],
+    "ideal_operating_range_m": [
+      0.07,
+      0.5
+    ]
+  },
+  "cpu_depth_gate": {
+    "depth_unit": "m",
+    "invalid_depth_value": 0.0,
+    "deterministic_unchanged_state": true,
+    "trajectory_frames_checked": 37,
+    "cube_visible_every_frame": true,
+    "table_visible_every_frame": true,
+    "minimum_cube_pixels": 310,
+    "minimum_table_pixels": 4169,
+    "cube_depth_min_over_trajectory_m": 0.16045674681663513,
+    "cube_depth_max_over_trajectory_m": 0.24337990581989288,
+    "maximum_cr10_arm_pixels": 0
+  },
+  "rigid_attachment": {
+    "maximum_position_drift_m": 2.0816681711721685e-16,
+    "maximum_rotation_matrix_entry_drift": 1.5543122344752192e-15
+  },
+  "opengl_rgbd_render": {
+    "required": true,
+    "validated": true,
+    "raw_background_depth_semantics": "MuJoCo represents unrendered background at its far plane; camera_preview.py remaps unsegmented pixels to 0",
+    "snapshot": {
+      "rgb_shape": [
+        720,
+        1280,
+        3
+      ],
+      "rgb_dtype": "uint8",
+      "depth_shape": [
+        720,
+        1280
+      ],
+      "depth_dtype": "float32",
+      "deterministic_rgb": true,
+      "deterministic_depth": true,
+      "cube_pixels": 32189,
+      "table_pixels": 416853,
+      "cr10_arm_pixels": 0,
+      "projected_cube_center_pixel": [
+        639.9999654062609,
+        360.28071264866173
+      ],
+      "projected_center_pixel_is_cube": true,
+      "cube_bbox_xyxy_px": [
+        531,
+        261,
+        735,
+        457
+      ],
+      "cube_touches_image_border": false,
+      "cube_rgb_mean": [
+        75.17804218832521,
+        16.621827332318492,
+        11.031656777159899
+      ],
+      "cube_depth_min_m": 0.18301917612552643,
+      "cube_depth_max_m": 0.24665680527687073,
+      "cube_geometric_depth_bounds_m": [
+        0.18290494249109676,
+        0.262617469021007
+      ]
+    }
+  },
+  "reference_task": {
+    "episode_steps": 36,
+    "cube_progress_m": 0.04078107704225384,
+    "success": true,
+    "safety_fault": null
+  },
+  "hardware_motion_commanded": false,
+  "claims": {
+    "validated": [
+      "compiled 1280x720 pinhole projection matches the configured nominal D405 matrix",
+      "camera transform is rigidly attached to the Robotiq mount",
+      "metric axial depth and geom visibility are deterministic",
+      "cube and table remain visible through the complete verified push",
+      "no CR10 arm mesh is visible in the provisional wrist view",
+      "zero-mass non-colliding camera visual preserves the Pack 4 task",
+      "native-resolution MuJoCo RGB, depth, and segmentation rendering",
+      "rendered cube color and depth agree with model geometry"
+    ],
+    "not_validated": [
+      "physical wrist-camera extrinsic",
+      "unit-specific D405 intrinsics and distortion",
+      "lens distortion or stereo depth artifacts",
+      "physical depth scale and invalid-pixel behavior",
+      "camera mass or mount collisions",
+      "vision-policy learning or robustness",
+      "sim-to-real transfer"
+    ]
+  }
+}

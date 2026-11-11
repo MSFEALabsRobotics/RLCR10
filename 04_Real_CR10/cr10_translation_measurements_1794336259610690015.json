@@ -1,0 +1,16 @@
+{
+  "reference_mm_deg": [
+    166.3857,
+    620.9493,
+    -58.2358,
+    88.48,
+    3.5859,
+    -173.5134
+  ],
+  "execute": true,
+  "status": "stopped",
+  "approved_for_motion": false,
+  "samples": [],
+  "commands": [],
+  "error": "SafetyFault: Start pose differs from the supplied pose; no automatic repositioning"
+}

@@ -1,0 +1,68 @@
+{
+  "environment_id": "CR10-2F85-RGBDColorTargetPush-v0",
+  "algorithm": "PPO",
+  "policy": "MlpPolicy over compact RGB-D-derived features",
+  "perception": "128x72 RGB HSV masks plus aligned metric-depth back-projection; raw images are not sent to PPO",
+  "action": "bounded [TCP forward, TCP lateral] increment with 2 mm maximum Euclidean step and fixed closed gripper",
+  "seed": 7,
+  "training_display_mode": "headless",
+  "viewer_delay_s": 0.0,
+  "training_timesteps": 2048,
+  "evaluation_episodes": 2,
+  "evaluation_successes": 0,
+  "episodes": [
+    {
+      "episode": 1,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": false,
+      "episode_steps": 80,
+      "target_progress_m": 1.2158481823532996e-19,
+      "wrong_cube_displacement_m": 1.2158481823532996e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          -0.006007237359881401,
+          0.02316762752161594,
+          0.08267886191606522
+        ],
+        [
+          0.017164941877126694,
+          0.027065816870890557,
+          0.05029083788394928
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": false,
+      "episode_steps": 80,
+      "target_progress_m": 2.937161339392802e-20,
+      "wrong_cube_displacement_m": 2.937161339392802e-20,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.003544430248439312,
+          0.05504301720065996,
+          0.14656709134578705
+        ],
+        [
+          -0.022140003740787506,
+          0.023017194797284903,
+          0.07865086942911148
+        ]
+      ]
+    }
+  ],
+  "versions": {
+    "stable_baselines3": "2.7.1",
+    "gymnasium": "1.2.2",
+    "mujoco": "3.11.0",
+    "numpy": "2.2.6",
+    "torch": "2.7.1+cpu"
+  },
+  "hardware_motion_commanded": false,
+  "claim_boundary": "Simulation baseline only. This does not establish policy quality, physical color/depth robustness, hardware safety, or sim-to-real transfer."
+}

@@ -1,0 +1,28 @@
+{
+  "camera_origin_from_flange_base_m": null,
+  "plate_contact_from_flange_base_m": null,
+  "workspace_min_base_m": null,
+  "workspace_max_base_m": null,
+  "verified_joint_limits_deg": null,
+  "box_width_m": 0.1,
+  "handover_gap_m": 0.04,
+  "lateral_tolerance_m": 0.01,
+  "vertical_tolerance_m": 0.015,
+  "physical_geometry_verified": false,
+  "independent_camera_validation_passed": false,
+  "full_path_clearance_verified": false,
+  "robot_protection_verified": false,
+  "box_height_m": 0.14,
+  "boxes_per_stack": 2,
+  "box_count": 4,
+  "stack_colors": [
+    "red",
+    "blue"
+  ],
+  "approx_home_plate_to_box_face_m": 0.28,
+  "fixed_push_m": 0.1,
+  "plate_width_m": 0.09,
+  "plate_height_m": 0.09,
+  "plate_thickness_m": 0.0045,
+  "camera_body_projects_beyond_plate_m_approx": 0.08
+}

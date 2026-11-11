@@ -1,0 +1,17 @@
+{
+  "generated_from": "CR10_D405_PLATE_PPO_HARDWARE_PREVIEW_v0_2",
+  "local_environment_tests": {
+    "status": "PASS",
+    "software_preflight_without_sb3": "20/20",
+    "pytest": "14/14",
+    "python_compile": "PASS"
+  },
+  "actual_PPO_inference_in_this_container": "NOT_RUN_STABLE_BASELINES3_UNAVAILABLE",
+  "actual_PPO_inference_reported_by_user": "PASS_PREVIOUS_USER_LOG",
+  "new_software_preflight_with_real_policy": "REQUIRES_USER_EXISTING_SB3_ENV",
+  "mujoco_parity_test": "REQUIRES_USER_LOCAL_PATCHED_SIM_AND_OFFICIAL_MESHES",
+  "ros2_generated_interface_test": "REQUIRES_USER_SOURCED_ROS_WORKSPACE",
+  "physical_camera": "NOT_TESTED",
+  "physical_motion": "DISABLED",
+  "note": "No installation or physical-hardware connection was attempted."
+}

@@ -1,0 +1,20 @@
+{
+  "source_project": "/home/marwah/Downloads/CR10_CLASS_TEST/CR10_NEW_PLATE_RL_FULL_CLASS_PACKAGE",
+  "stage_01_02_03_preserved": true,
+  "hardware_stage": "04_Real_CR10",
+  "included_additional_original_scripts": [
+    "cr10_camera_translation_check_v2.py",
+    "cr10_live_d405_ppo_one_supervised_step.py"
+  ],
+  "hardware_bridge_modules": [
+    "arm_bridge/__init__.py",
+    "arm_bridge/core.py",
+    "arm_bridge/perception.py",
+    "arm_bridge/policy.py",
+    "arm_bridge/ros_arm.py"
+  ],
+  "simulation_reference_policy_sha256": "f301e4194d6bfaca245ec1f1b0e63af2df8f5dfbef26e1952d48cd2d26db3221",
+  "simulation_reference_normalizer_sha256": "4ed9e3abf43b2c96610048f62f5c9669189bd1cee56dc31990f105dfe7d6d2fd",
+  "real_hardware_execution_tested_here": false,
+  "assembly_performed_network_or_robot_activity": false
+}

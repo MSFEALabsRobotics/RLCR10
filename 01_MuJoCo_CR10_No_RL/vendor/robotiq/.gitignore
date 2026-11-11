@@ -1,0 +1,11 @@
+build/
+install/
+log/
+serial/
+__pycache__/
+*.pyc
+
+# IDE / per-machine cmake config
+.qtcreator/
+CMakeUserPresets.json
+robotiq_tsf/build/

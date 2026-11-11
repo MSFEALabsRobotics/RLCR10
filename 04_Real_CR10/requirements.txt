@@ -1,0 +1,7 @@
+# Only install missing packages into an EXISTING environment. ROS2 supplies rclpy and dobot_msgs_v4.
+# The checkpoint was produced with SB3 2.7.1 / Gymnasium 1.2.2 / NumPy 2.2.6.
+numpy>=1.24,<3
+opencv-python>=4.8
+stable-baselines3==2.7.1
+gymnasium==1.2.2
+# For camera stage only: pyrealsense2 from installed RealSense SDK; not included here.

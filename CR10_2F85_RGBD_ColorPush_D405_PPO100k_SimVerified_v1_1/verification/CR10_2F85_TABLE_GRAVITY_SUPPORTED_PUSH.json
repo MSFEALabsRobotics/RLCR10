@@ -1,0 +1,100 @@
+{
+  "verification_level": "CR10_2F85_TABLE_GRAVITY_SUPPORTED_PUSH",
+  "gravity_m_s2": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "table_center_world_m": [
+    0.5620934187200137,
+    -0.7993592515830538,
+    1.257325622877349
+  ],
+  "table_size_m": [
+    0.7,
+    0.4,
+    0.1
+  ],
+  "table_friction_simulation_value": [
+    0.5,
+    0.005,
+    0.0001
+  ],
+  "table_push_axis_world": [
+    0.3420163829639817,
+    -0.939693989437112,
+    0.0
+  ],
+  "table_back_support_m": 0.04,
+  "cube_start_world_m_after_settle": [
+    0.45606834000117935,
+    -0.508054114857549,
+    1.3322178674552696
+  ],
+  "rest_height_error_m": 0.00010775542207941413,
+  "rest_speed_m_s": 1.3620680276894641e-11,
+  "max_cube_table_penetration_m": 0.0001691584429936166,
+  "accepted_cartesian_waypoints": 40,
+  "cube_motion_along_push_m": 0.04866413614143446,
+  "cube_vertical_drift_m": 1.0950543972487736e-05,
+  "cube_final_tilt_deg": 0.02784348094148846,
+  "table_contact_substeps_total": 3563,
+  "table_contact_substeps_during_push": 2812,
+  "gripper_cube_contact_substeps": 1378,
+  "gripper_contact_geoms": {
+    "left_pad1": 157,
+    "right_pad1": 1228
+  },
+  "robot_table_contact_substeps": 0,
+  "simulation_telemetry": {
+    "schema_version": "cr10_2f85_pack3_sim_telemetry_v1",
+    "read_only": true,
+    "sample_count": 3570,
+    "all_values_finite": true,
+    "gripper": {
+      "actuator_force_source": "MjData.actuator_force[gripper_actuator]",
+      "actuator_force_scalar_units": "actuator-space model generalized-force units; not calibrated fingertip newtons",
+      "actuator_force_scalar_peak_abs": 1.2279535527433154,
+      "driver_joint_source": "MjData.qfrc_actuator at hinge DOFs",
+      "driver_joint_units": "N*m generalized actuator torque in this SI model",
+      "driver_joint_peak_abs_Nm": {
+        "left_driver_joint": 0.6139767763716577,
+        "right_driver_joint": 0.6139767763716577
+      }
+    },
+    "contact": {
+      "source": "mujoco.mj_contactForce",
+      "contact_force_units": "N",
+      "contact_torque_units": "N*m about the contact point",
+      "frame_contract": "raw wrench is resolved in the MuJoCo contact frame for the recorded ordered geom1/geom2 pair; world vector = frame.T @ contact-frame vector",
+      "pair_statistics": {
+        "gripper_cube": {
+          "contact_points": 1479,
+          "contact_substeps": 1378,
+          "peak_normal_force_abs_N": 2.042443939822325,
+          "peak_tangential_force_norm_N": 1.429710757875627,
+          "peak_force_norm_N": 2.4931205543459467,
+          "peak_torque_norm_Nm": 0.0,
+          "phase_contact_substeps": {
+            "push": 1378
+          }
+        },
+        "cube_table": {
+          "contact_points": 13445,
+          "contact_substeps": 3563,
+          "peak_normal_force_abs_N": 1.4864073761026075,
+          "peak_tangential_force_norm_N": 0.8918444256615645,
+          "peak_force_norm_N": 1.733433981239506,
+          "peak_torque_norm_Nm": 0.0,
+          "phase_contact_substeps": {
+            "settle": 751,
+            "push": 2812
+          }
+        }
+      }
+    },
+    "claim_boundary": "MuJoCo solver telemetry only. Values are not calibrated physical 2F-85 force/current readings, not a wrist F/T sensor, and not validated physical contact forces."
+  },
+  "hardware_motion_commanded": false,
+  "claim_boundary": "Functional Earth-gravity/table support and supported-push gate only. The tabletop is aligned with the push and begins 40 mm behind the cube center, keeping the wrist/arm outside its rear edge; any compiled robot/table contact fails verification. Table friction and contact dynamics are plausible simulation values, not physically identified lab values."
+}

@@ -1,0 +1,13 @@
+{
+  "home_pose_mm_deg": null,
+  "handover_forward_m": null,
+  "handover_lateral_m": null,
+  "image_edge_margin_px": 8,
+  "plate_front_offset_m": null,
+  "box_reference_to_rear_face_m": null,
+  "maximum_contact_approach_m": null,
+  "push_distance_m": 0.10,
+  "motion_step_m": 0.002,
+  "push_geometry_verified": false,
+  "stroke_clearance_verified": false
+}

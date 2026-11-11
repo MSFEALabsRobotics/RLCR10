@@ -1,0 +1,215 @@
+{
+  "environment_id": "CR10-2F85-RGBDColorTargetPush-v0",
+  "evaluation_purpose": "D405 candidate compatibility reevaluation of inherited PPO100k policy",
+  "model": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/pack5_v02_color_ppo_100k_seed7.zip",
+  "normalizer": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/pack5_v02_color_ppo_100k_seed7_vecnormalize.pkl",
+  "camera_model": "RealSense D405",
+  "camera_name": "d405_aligned_rgbd",
+  "intrinsics_status": "NOMINAL_D405_FOV_DERIVED_NOT_DEVICE_CALIBRATED",
+  "camera_matrix_px": [
+    [
+      674.4192801798159,
+      0.0,
+      640.0
+    ],
+    [
+      0.0,
+      649.4571918977125,
+      360.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "seed": 7,
+  "evaluation_episodes": 8,
+  "evaluation_successes": 8,
+  "episodes": [
+    {
+      "episode": 1,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 44,
+      "target_progress_m": 0.04025496467807623,
+      "wrong_cube_displacement_m": 6.0109348341062e-20,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.6803760932419788,
+          0.06664852052927017
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.04008915623928056,
+      "wrong_cube_displacement_m": 4.9180375915414365e-20,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.6215291619300842,
+          0.9140805744606516,
+          1.0
+        ],
+        [
+          -0.0537392720580101,
+          0.5273235020349207,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 3,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 43,
+      "target_progress_m": 0.040638500683228836,
+      "wrong_cube_displacement_m": 1.1065584580968231e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.20307627320289612,
+          0.680669785932053,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 4,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 43,
+      "target_progress_m": 0.04042934977685867,
+      "wrong_cube_displacement_m": 1.7126453353552457e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.6395060695534529,
+          -0.053312644362449646
+        ]
+      ]
+    },
+    {
+      "episode": 5,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 45,
+      "target_progress_m": 0.04070300797138929,
+      "wrong_cube_displacement_m": 8.606565785197513e-20,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.7258236765033669,
+          0.013901298865675926
+        ]
+      ]
+    },
+    {
+      "episode": 6,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.0404798823192876,
+      "wrong_cube_displacement_m": 2.0765047608730508e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.6247175931930542,
+          0.9145299273988475,
+          1.0
+        ],
+        [
+          -0.05041126161813736,
+          0.5229450162581127,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 7,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 44,
+      "target_progress_m": 0.04055386978679423,
+      "wrong_cube_displacement_m": 2.0765047608730508e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.2952023148536682,
+          0.7522592348131266,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 8,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 43,
+      "target_progress_m": 0.04096099432762626,
+      "wrong_cube_displacement_m": 1.6871601182093538e-19,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.6186857131678004,
+          -0.057719506323337555
+        ]
+      ]
+    }
+  ],
+  "versions": {
+    "stable_baselines3": "2.7.1",
+    "gymnasium": "1.2.2",
+    "mujoco": "3.11.0",
+    "numpy": "2.2.6"
+  },
+  "hardware_motion_commanded": false,
+  "claim_boundary": "Simulation compatibility reevaluation only. Nominal D405 intrinsics and the wrist transform remain uncalibrated for physical hardware."
+}

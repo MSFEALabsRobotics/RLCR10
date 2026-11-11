@@ -1,0 +1,309 @@
+{
+  "source_lock": {
+    "dobot_repo": "vendor/dobot",
+    "robotiq_repo": "vendor/robotiq",
+    "menagerie_repo": "vendor/menagerie",
+    "realsense_d405_reference": {
+      "repository": "realsenseai/realsense-ros",
+      "branch": "ros2-master",
+      "reference_commit": "60c8509",
+      "urdf": "realsense2_description/urdf/_d405.urdf.xacro",
+      "status": "REFERENCE_ONLY_NOT_A_REQUIRED_LOCAL_BUILD_DEPENDENCY"
+    }
+  },
+  "model": {
+    "physics_timestep_s": 0.002,
+    "control_timestep_s": 0.05,
+    "home_deg": [
+      0.0,
+      -40.0,
+      45.0,
+      0.0,
+      55.0,
+      0.0
+    ],
+    "push_pose_deg": [
+      0.0,
+      -40.0,
+      45.0,
+      -5.0,
+      20.0,
+      0.0
+    ],
+    "arm_position_servo_kp": [
+      700.0,
+      900.0,
+      700.0,
+      250.0,
+      150.0,
+      80.0
+    ],
+    "idealized_arm_gravity_compensation": true,
+    "control_site_name": "nominal_tcp_site",
+    "mount_xyz_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mount_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mount_status": "NOMINAL_STANDARD_COAXIAL_MOUNT_ASSUMPTION: identity mount transform at CR10 Link6/flange reference; physical lab indexing remains unverified.",
+    "nominal_tcp_xyz_m": [
+      0.0,
+      0.0,
+      0.174
+    ],
+    "nominal_tcp_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "tcp_status": "NOMINAL_VENDOR_PUBLISHED_NOT_PHYSICALLY_VERIFIED",
+    "tcp_source": "Robotiq 2F-85 & 2F-140 Instruction Manual: nominal 2F-85 TCP (0,0,174) mm for the standard single-gripper setup with coupling included.",
+    "mount_assumption": "STANDARD_COAXIAL_IDENTITY_INDEXING_ASSUMPTION",
+    "dynamics_status": "SIMULATION_CONTACT_ISOLATION_ONLY: Menagerie 2F-85 mechanism/contact is source-locked; CR10 servos are development abstractions; the known-cube gate intentionally sets gravity to zero to isolate contact mechanics.",
+    "rotation_characteristic_length_m": 0.35,
+    "ik_damping": 0.035,
+    "ik_max_iterations": 180,
+    "ik_max_joint_step_rad": 0.04
+  },
+  "verification": {
+    "gripper_settle_s": 1.5,
+    "open_command": 0.0,
+    "close_command": 255.0,
+    "open_driver_max_rad": 0.1,
+    "close_driver_min_rad": 0.6,
+    "driver_symmetry_max_error_rad": 0.03,
+    "fk_motion_min_m": 0.001,
+    "joint1_probe_rad": 0.05,
+    "tcp_local_position_tolerance_m": 1e-09
+  },
+  "action": {
+    "max_xy_step_m": 0.002,
+    "workspace_min_m": [
+      -0.2,
+      -0.55,
+      0.75
+    ],
+    "workspace_max_m": [
+      0.6,
+      0.2,
+      1.15
+    ],
+    "joint_margin_deg": 5.0,
+    "software_joint_speed_cap_rad_s": [
+      1.25,
+      1.25,
+      1.25,
+      1.25,
+      1.25,
+      1.25
+    ],
+    "min_scaled_jacobian_sigma": 0.02,
+    "max_ik_pos_error_m": 0.0015,
+    "max_ik_rot_error_rad": 0.01
+  },
+  "known_cube_push": {
+    "cube_size_m": 0.05,
+    "cube_mass_kg": 0.1,
+    "cube_contact_friction": [
+      0.6,
+      0.005,
+      0.0001
+    ],
+    "initial_gap_m": 0.03,
+    "push_distance_m": 0.08,
+    "min_contact_substeps": 3,
+    "min_cube_displacement_m": 0.01,
+    "max_final_tcp_tracking_error_m": 0.012,
+    "zero_gravity": true,
+    "placement_semantics": "At a fixed nonsingular CR10 pose, use the nominal TCP site itself as the reference. The 50 mm cube is placed explicitly on the gripper forward axis (TCP local +Z) with its near face exactly 30 mm beyond the nominal TCP plane. The TCP is then commanded 80 mm along that same axis. No fingertip geometry, contact search, table, fixture solver, or inferred world placement is used. Each 2 mm Cartesian waypoint is now held until the ACTUAL MuJoCo TCP reaches it (<=1.5 mm for 5 consecutive physics steps) or a 2.0 s timeout is raised; the verifier no longer advances an 80 mm target faster than the arm dynamics can track.",
+    "waypoint_tracking_tolerance_m": 0.0015,
+    "waypoint_timeout_s": 2.0,
+    "waypoint_settle_substeps": 5
+  },
+  "table_gravity_push": {
+    "gravity_m_s2": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "table_size_m": [
+      0.7,
+      0.4,
+      0.1
+    ],
+    "table_back_support_m": 0.04,
+    "table_friction": [
+      0.5,
+      0.005,
+      0.0001
+    ],
+    "cube_settle_s": 1.5,
+    "max_rest_height_error_m": 0.002,
+    "max_rest_speed_m_s": 0.01,
+    "max_contact_penetration_m": 0.002,
+    "max_cube_vertical_drift_m": 0.005,
+    "max_cube_tilt_deg": 10.0,
+    "min_table_contact_substeps": 20,
+    "min_supported_push_contact_substeps": 3,
+    "claim": "Functional Earth-gravity/table support and supported-push gate only. The tabletop is aligned with the push and begins 40 mm behind the cube center, keeping the wrist/arm outside its rear edge; any compiled robot/table contact fails verification. Table friction and contact dynamics are plausible simulation values, not physically identified lab values."
+  },
+  "pack3": {
+    "telemetry_schema": "cr10_2f85_pack3_sim_telemetry_v1",
+    "telemetry_claim": "Read-only MuJoCo actuator/generalized-force and contact-wrench telemetry. Contact forces are solver values in N and contact torques are solver values in N*m for this SI simulation model. The gripper actuator scalar remains an actuator-space model quantity and is not labeled as fingertip newtons. None of these values is a calibrated physical sensor reading.",
+    "normalized_action_components": [
+      "push_increment_along_validated_segment",
+      "gripper_position_command"
+    ],
+    "normalized_action_bounds": [
+      -1.0,
+      1.0
+    ],
+    "action_claim": "Simulation-only admission gate on the exact Pack 2 push segment. It does not establish a physical workspace, hardware collision safety, force control, or real motor tracking."
+  },
+  "pack4": {
+    "environment_id": "CR10-2F85-TabletopPush-v0",
+    "training_environment_id": "CR10-2F85-TabletopPushForwardOnly-v0",
+    "training_gripper_normalized": 1.0,
+    "observation_schema": "cr10_2f85_pack4_state_observation_v1",
+    "cube_goal_displacement_m": 0.04,
+    "max_episode_steps": 50,
+    "tcp_progress_weight": 0.1,
+    "invalid_action_penalty": -0.05,
+    "success_bonus": 1.0,
+    "fault_penalty": -1.0,
+    "reward_claim": "Potential-difference shaping uses cube progress toward the explicit 40 mm task goal plus a 0.1-weighted TCP-segment progress term that supplies approach feedback before first contact. Simulated force is diagnostic information and is not used in the reward. No reward or task value is claimed to transfer to physical hardware.",
+    "reset_claim": "Deterministic Pack 2 supported-cube reset with no domain randomization. Camera observations and physical calibration are intentionally deferred."
+  },
+  "pack5": {
+    "camera_name": "d405_aligned_rgbd",
+    "camera_model": "RealSense D405",
+    "stream_convention": "depth_aligned_to_color",
+    "native_resolution_px": [
+      1280,
+      720
+    ],
+    "policy_preview_resolution_px": [
+      128,
+      72
+    ],
+    "focal_length_px": [
+      674.4192801798159,
+      649.4571918977125
+    ],
+    "principal_point_px": [
+      640.0,
+      360.0
+    ],
+    "principal_point_convention": "OPEN_CV_ABSOLUTE_PIXEL_COORDINATES_FROM_IMAGE_TOP_LEFT; build_model.py converts once to MuJoCo 3.11 sensor-center offsets",
+    "projection_sensor_size_m": [
+      0.002688,
+      0.001512
+    ],
+    "intrinsics_tolerance_px": 0.001,
+    "nominal_field_of_view_deg": [
+      87.0,
+      58.0
+    ],
+    "ideal_operating_range_m": [
+      0.07,
+      0.5
+    ],
+    "optical_center_xyz_m_in_mount_frame": [
+      0.0,
+      -0.1,
+      0.03
+    ],
+    "look_at_xyz_m_in_mount_frame": [
+      0.0,
+      0.0,
+      0.229
+    ],
+    "housing_size_m": [
+      0.042,
+      0.042,
+      0.023
+    ],
+    "housing_mass_and_collision_modeled": false,
+    "depth_unit": "metres",
+    "mount_status": "PROVISIONAL_WRIST_EXTRINSIC: the D405 optical center is offset 100 mm along mount -Y and 30 mm along mount +Z toward the gripper, aimed at the initial cube center. Replace this one transform after physical measurement; it is not a hand-eye calibration claim.",
+    "intrinsics_status": "NOMINAL_D405_FOV_DERIVED_NOT_DEVICE_CALIBRATED",
+    "intrinsics_source": "Nominal 1280x720 pinhole matrix derived from the D405 published 87 x 58 degree field of view with a centered principal point: fx=674.4192801798159, fy=649.4571918977125, cx=640, cy=360 pixels. Replace with the physical D405 depth-aligned-to-color CameraInfo/intrinsics before hardware use.",
+    "geometry_source": "realsenseai/realsense-ros realsense2_description/urdf/_d405.urdf.xacro: 42 x 42 x 23 mm peripheral body, 18 mm stereo imager separation, and D405 optical-frame convention. Repository extrinsics are documented as approximate.",
+    "claim": "Simulation-only aligned RGB-D sensor geometry candidate. The D405 body and nominal frames come from the RealSense ROS description; the optical projection uses the published nominal field of view, not a physical unit calibration. Lens distortion, stereo matching artifacts, depth quantization/noise, camera payload, mount collision, latency, and the physical wrist extrinsic are not modeled or validated.",
+    "color_task": {
+      "environment_id": "CR10-2F85-RGBDColorTargetPush-v0",
+      "observation_schema": "cr10_2f85_pack5_rgbd_color_features_v1",
+      "policy_resolution_px": [
+        128,
+        72
+      ],
+      "cube_colors": {
+        "red": {
+          "rgba": [
+            0.82,
+            0.18,
+            0.12,
+            1.0
+          ],
+          "hue_ranges_0_to_1": [
+            [
+              0.0,
+              0.055
+            ],
+            [
+              0.94,
+              1.0
+            ]
+          ],
+          "minimum_saturation": 0.35,
+          "minimum_value": 0.04
+        },
+        "blue": {
+          "rgba": [
+            0.1,
+            0.25,
+            0.85,
+            1.0
+          ],
+          "hue_ranges_0_to_1": [
+            [
+              0.54,
+              0.75
+            ]
+          ],
+          "minimum_saturation": 0.35,
+          "minimum_value": 0.04
+        }
+      },
+      "minimum_color_mask_pixels": 12,
+      "minimum_valid_depth_m": 0.07,
+      "maximum_valid_depth_m": 0.5,
+      "maximum_reset_lateral_perception_error_m": 0.012,
+      "cube_lateral_offset_m": 0.035,
+      "cube_lateral_jitter_m": 0.005,
+      "tcp_forward_bounds_m": [
+        0.0,
+        0.105
+      ],
+      "tcp_lateral_bounds_m": [
+        -0.075,
+        0.075
+      ],
+      "cube_goal_displacement_m": 0.04,
+      "maximum_wrong_cube_displacement_m": 0.008,
+      "max_episode_steps": 80,
+      "approach_reward_weight": 0.02,
+      "wrong_cube_motion_penalty_weight": 1.0,
+      "invalid_action_penalty": -0.05,
+      "success_bonus": 1.0,
+      "fault_penalty": -1.0,
+      "fixed_gripper_normalized": 1.0,
+      "claim": "Simulation-only color-conditioned RGB-D perception and bounded planar push task. RGB HSV masks select red/blue visible surfaces, aligned metric depth back-projects those pixels, and PPO receives compact perceived features rather than raw images. This is not end-to-end visual RL, physical color calibration, hand-eye calibration, force control, or sim-to-real validation."
+    }
+  }
+}

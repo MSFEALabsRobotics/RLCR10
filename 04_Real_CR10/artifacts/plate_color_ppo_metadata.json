@@ -1,0 +1,466 @@
+{
+  "environment_id": "CR10-2F85-RGBDColorTargetPush-v0",
+  "algorithm": "PPO",
+  "policy": "MlpPolicy over compact RGB-D-derived features",
+  "end_effector": "plastic_plate_89mm_square_4p5mm_thick",
+  "source_geometry_verified_for_hardware": false,
+  "perception": "128x72 RGB HSV masks plus aligned metric-depth back-projection; raw images are not sent to PPO",
+  "action": "bounded [TCP forward, TCP lateral] increment with 2 mm maximum Euclidean step, fixed tool height/orientation, rigid plastic plate",
+  "seed": 7,
+  "training_display_mode": "headless",
+  "viewer_delay_s": 0.0,
+  "training_timesteps": 100000,
+  "evaluation_episodes": 20,
+  "evaluation_successes": 20,
+  "episodes": [
+    {
+      "episode": 1,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.04125579790033021,
+      "wrong_cube_displacement_m": 3.391947973872838e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 62,
+      "target_progress_m": 0.04133065651519659,
+      "wrong_cube_displacement_m": 1.0313161602405575e-09,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9322988986968994,
+          0.9925637129814394,
+          1.0
+        ],
+        [
+          0.8576858043670654,
+          0.9936260119561227,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 3,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04122586382220006,
+      "wrong_cube_displacement_m": 9.192891788747419e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.45197898149490356,
+          0.9900359814817256,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 4,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 61,
+      "target_progress_m": 0.04112882147107019,
+      "wrong_cube_displacement_m": 3.937852848717714e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7737743258476257,
+          0.9698166847229004,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.8554919332754417,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 5,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04085678114253414,
+      "wrong_cube_displacement_m": 2.717513334896464e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 6,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.0407284821226223,
+      "wrong_cube_displacement_m": 8.588727287807995e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8738817572593689,
+          0.9574214336918849,
+          1.0
+        ],
+        [
+          0.9051083922386169,
+          0.9962611326984331,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 7,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.04149310152059812,
+      "wrong_cube_displacement_m": 9.33997497738732e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43496233224868774,
+          0.960006867136274,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 8,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 61,
+      "target_progress_m": 0.04114504593500253,
+      "wrong_cube_displacement_m": 3.509017752204484e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7168182730674744,
+          0.9488291378881111,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9534586892753351,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 9,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04094656200122992,
+      "wrong_cube_displacement_m": 2.9313066734242114e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 10,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04047029458534539,
+      "wrong_cube_displacement_m": 8.817693551699411e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9113543629646301,
+          0.9760742378684709,
+          1.0
+        ],
+        [
+          0.8964855074882507,
+          0.9948949622658064,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 11,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.040392386231080976,
+      "wrong_cube_displacement_m": 8.682158109041729e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4323616027832031,
+          0.9782576973621662,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 12,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04111050969800517,
+      "wrong_cube_displacement_m": 3.122715659320695e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7799597978591919,
+          0.96630798144774,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9619517380541022,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 13,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.040004090920769286,
+      "wrong_cube_displacement_m": 2.545791915353825e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9320261478424072,
+          0.98581502618997,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 14,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.041087400802558814,
+      "wrong_cube_displacement_m": 2.3274866731818154e-16,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8748279809951782,
+          0.9567046773433685,
+          1.0
+        ],
+        [
+          0.8960010409355164,
+          0.994962375164032,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 15,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.04150345637594858,
+      "wrong_cube_displacement_m": 9.520888584748928e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.44668811559677124,
+          0.9614572640050921,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 16,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04033888480762233,
+      "wrong_cube_displacement_m": 2.5357074358353814e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7874652147293091,
+          0.9478169456124306,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 17,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.04117657953897811,
+      "wrong_cube_displacement_m": 3.443408822848221e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9980198259939227,
+          -0.9347518086433411
+        ]
+      ]
+    },
+    {
+      "episode": 18,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04088737763749303,
+      "wrong_cube_displacement_m": 8.714396882616216e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8713420629501343,
+          0.9557857307103964,
+          1.0
+        ],
+        [
+          0.9563254714012146,
+          0.998792419066796,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 19,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.040997859680244456,
+      "wrong_cube_displacement_m": 9.254108220313044e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43283337354660034,
+          0.9691431771625172,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 20,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.040758248856196645,
+      "wrong_cube_displacement_m": 3.051741636541011e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7628015279769897,
+          0.9606231039220636,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9636363636363636,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "versions": {
+    "stable_baselines3": "2.7.1",
+    "gymnasium": "1.2.2",
+    "mujoco": "3.11.0",
+    "numpy": "2.2.6",
+    "torch": "2.7.1"
+  },
+  "hardware_motion_commanded": false,
+  "claim_boundary": "Plate simulation only. The flange mount, table XY, box footprint/mass, camera extrinsics/intrinsics and real friction are not calibrated. No hardware safety or sim-to-real guarantee."
+}

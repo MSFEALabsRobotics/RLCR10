@@ -1,0 +1,99 @@
+{
+  "locked_sources": {
+    "dobot": {
+      "path": "/home/marwah/Downloads/CR10_CLASS_TEST/CR10_NEW_PLATE_RL_FULL_CLASS_PACKAGE/01_MuJoCo_CR10_No_RL/vendor/dobot",
+      "branch": "feature/v4-optimization",
+      "commit": "0f21e9839888f188ac06b0a9fea622d13a29a74f",
+      "urdf_sha256": "4012ab3033761485025222332744f43ffdb58e61e9917aa714fd4f0ee8c25cda"
+    },
+    "robotiq": {
+      "path": "/home/marwah/Downloads/CR10_CLASS_TEST/CR10_NEW_PLATE_RL_FULL_CLASS_PACKAGE/01_MuJoCo_CR10_No_RL/vendor/robotiq",
+      "commit": "3ab3befccaa10468f80803ba687105c9d224d567",
+      "macro_sha256": "0c144283f72a2d75feb3d90cb49b3cea3f76e19e6026dd169651ec94a3c96fb3",
+      "ros2_control_sha256": "44ddc70cf6e90d866499038c8a165969ca695d830235437ebf3daf9f8c71dd96"
+    },
+    "menagerie": {
+      "path": "/home/marwah/Downloads/CR10_CLASS_TEST/CR10_NEW_PLATE_RL_FULL_CLASS_PACKAGE/01_MuJoCo_CR10_No_RL/vendor/menagerie",
+      "commit": "da76818e269b82289eba39808e2fb91d679d6994",
+      "model_sha256": "d48aca5f9151798ffd38111ce4e8b2081f3ec2d4f525161b33643451580010de"
+    }
+  },
+  "imported_files": [
+    {
+      "path": "models/source/dobot_cr10/cr10_robot.urdf",
+      "sha256": "4012ab3033761485025222332744f43ffdb58e61e9917aa714fd4f0ee8c25cda"
+    },
+    {
+      "path": "models/source/dobot_cr10/meshes/cr10/Link1.STL",
+      "sha256": "3441d1c7dcca338a4d6dcbf12de70f672d95bd028575da29f334f74e2a382a9a"
+    },
+    {
+      "path": "models/source/dobot_cr10/meshes/cr10/Link2.STL",
+      "sha256": "d0bd5fb6c5effaaaa5b4203c0c7d03a687379eb0a667f1828204108141ce2d15"
+    },
+    {
+      "path": "models/source/dobot_cr10/meshes/cr10/Link3.STL",
+      "sha256": "f07d54821bd9f0e819ae46b75ce22008e3e016ab65e0f7c91a7c4655d39b1cb0"
+    },
+    {
+      "path": "models/source/dobot_cr10/meshes/cr10/Link4.STL",
+      "sha256": "280b4f38a8c8f5ef3b6285b815ff68ae5b1692c5dbda132d344d500aee50a7e2"
+    },
+    {
+      "path": "models/source/dobot_cr10/meshes/cr10/Link5.STL",
+      "sha256": "4bb4eb850c98f4e5604982ed14e2ca57ffa8bab81e038e1d9cf2679877e7df3b"
+    },
+    {
+      "path": "models/source/dobot_cr10/meshes/cr10/Link6.STL",
+      "sha256": "ebbd54c1a761519f7cbd43e949150e2c59c1d2a3fb4a8a896087de44e4809e04"
+    },
+    {
+      "path": "models/source/dobot_cr10/meshes/cr10/base_link.STL",
+      "sha256": "61b77d2a997b90b95a6d417f7d105e7e0bafd8a385c59b6a994a9f4cad45fc29"
+    },
+    {
+      "path": "models/source/menagerie_2f85/2f85.xml",
+      "sha256": "d48aca5f9151798ffd38111ce4e8b2081f3ec2d4f525161b33643451580010de"
+    },
+    {
+      "path": "models/source/menagerie_2f85/assets/base.stl",
+      "sha256": "1c7b9f2bd92d705fc4e897c94e905973a3c05f406845e942229433deb7041453"
+    },
+    {
+      "path": "models/source/menagerie_2f85/assets/base_mount.stl",
+      "sha256": "87971dfdd6e5311b5a723e7b73c4701ebf5c2364df671500f30dfc1c53c8e61a"
+    },
+    {
+      "path": "models/source/menagerie_2f85/assets/coupler.stl",
+      "sha256": "d5ee95e62f8415bf5b6e503c831a958f5fc1990bf9b2865329ec38a28932727c"
+    },
+    {
+      "path": "models/source/menagerie_2f85/assets/driver.stl",
+      "sha256": "bbd6e868b1778bead60d2516c7ede581d7ad4e431744b1828757d6ea5129c112"
+    },
+    {
+      "path": "models/source/menagerie_2f85/assets/follower.stl",
+      "sha256": "633793332c081641ce200df27a40643cc293b29956e3cb5cb29cb811c33ef1c7"
+    },
+    {
+      "path": "models/source/menagerie_2f85/assets/pad.stl",
+      "sha256": "4af1fa8d9bb285abecbf5dfc88e74cb30f059a7a074c2030dc35e9ee4316019d"
+    },
+    {
+      "path": "models/source/menagerie_2f85/assets/silicone_pad.stl",
+      "sha256": "ca20c0fa61e6d3ce7b04bed25360e048e31dfd88ace04187aa6d9e8f4ca3fd0f"
+    },
+    {
+      "path": "models/source/menagerie_2f85/assets/spring_link.stl",
+      "sha256": "4fb74a8a0d76c0e471cf19fd48bc676fd5b19123798e7a39eb6aa56869354283"
+    },
+    {
+      "path": "models/source/robotiq_ros/2f_85.ros2_control.xacro",
+      "sha256": "44ddc70cf6e90d866499038c8a165969ca695d830235437ebf3daf9f8c71dd96"
+    },
+    {
+      "path": "models/source/robotiq_ros/robotiq_2f_85_macro.urdf.xacro",
+      "sha256": "0c144283f72a2d75feb3d90cb49b3cea3f76e19e6026dd169651ec94a3c96fb3"
+    }
+  ]
+}

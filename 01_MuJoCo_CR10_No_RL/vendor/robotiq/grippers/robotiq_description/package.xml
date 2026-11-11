@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>robotiq_description</name>
+  <version>1.1.0</version>
+  <description>URDF and xacro description package for the Robotiq gripper.</description>
+  <author>Cory Crean</author>
+  <maintainer email="noreply@robotiq.com">Robotiq</maintainer>
+  <license>BSD-3-Clause</license>
+  <url type="repository">https://github.com/robotiq/ros</url>
+  <url type="bugtracker">https://github.com/robotiq/ros/issues</url>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <exec_depend>ros2_control</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
+
+  <exec_depend>joint_state_broadcaster</exec_depend>
+
+  <!-- Gripper action controller: parallel_gripper_controller is Jazzy and newer;
+       Humble only has gripper_controllers. config/robotiq_controllers*.yaml pick
+       the matching plugin. -->
+  <exec_depend condition="$ROS_DISTRO != humble">parallel_gripper_controller</exec_depend>
+  <exec_depend condition="$ROS_DISTRO == humble">gripper_controllers</exec_depend>
+
+  <test_depend>ament_cmake_pytest</test_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>python3-yaml</test_depend>
+  <!-- test_ros2_control_urdf expands the gripper xacro. -->
+  <test_depend>xacro</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,135 @@
+{
+  "task": "requested red-or-blue tabletop push",
+  "perception": "HSV color masks plus aligned metric depth back-projection",
+  "policy_resolution_px": [
+    128,
+    72
+  ],
+  "snapshots": [
+    {
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "reset": {
+        "rgb_policy_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_reset_rgb_128x72.png",
+        "rgb_10x_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_reset_rgb_10x.png",
+        "depth_metres_npy": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_reset_depth_m.npy",
+        "depth_visual_policy_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_reset_depth_visual_128x72.png",
+        "depth_visual_10x_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_reset_depth_visual_10x.png",
+        "perception": {
+          "red": {
+            "color": "red",
+            "mask_pixels": 352,
+            "center_pixel_uv": [
+              72.0,
+              35.0
+            ],
+            "median_depth_m": 0.20217644423246384,
+            "visible_surface_point_camera_xyz_m": [
+              0.025127060720789702,
+              0.0028861909177474365,
+              -0.20217644423246384
+            ],
+            "visible_surface_point_world_xyz_m": [
+              0.4266239880260955,
+              -0.5006225426293464,
+              1.3441258110340644
+            ]
+          },
+          "blue": {
+            "color": "blue",
+            "mask_pixels": 390,
+            "center_pixel_uv": [
+              51.5,
+              36.0
+            ],
+            "median_depth_m": 0.20424578338861465,
+            "visible_surface_point_camera_xyz_m": [
+              -0.03717421376965345,
+              0.0,
+              -0.20424578338861465
+            ],
+            "visible_surface_point_world_xyz_m": [
+              0.4853572520057197,
+              -0.4798342195254065,
+              1.3406171944240037
+            ]
+          }
+        }
+      },
+      "success": {
+        "rgb_policy_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_success_rgb_128x72.png",
+        "rgb_10x_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_success_rgb_10x.png",
+        "depth_metres_npy": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_success_depth_m.npy",
+        "depth_visual_policy_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_success_depth_visual_128x72.png",
+        "depth_visual_10x_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_red_success_depth_visual_10x.png",
+        "episode_steps": 61,
+        "target_progress_m": 0.04031716461316693,
+        "wrong_cube_displacement_m": 1.7008213337414134e-19,
+        "safety_fault": null
+      }
+    },
+    {
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "reset": {
+        "rgb_policy_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_reset_rgb_128x72.png",
+        "rgb_10x_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_reset_rgb_10x.png",
+        "depth_metres_npy": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_reset_depth_m.npy",
+        "depth_visual_policy_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_reset_depth_visual_128x72.png",
+        "depth_visual_10x_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_reset_depth_visual_10x.png",
+        "perception": {
+          "red": {
+            "color": "red",
+            "mask_pixels": 399,
+            "center_pixel_uv": [
+              51.0,
+              36.0
+            ],
+            "median_depth_m": 0.2044842392206192,
+            "visible_surface_point_camera_xyz_m": [
+              -0.039466902112543466,
+              0.0,
+              -0.2044842392206192
+            ],
+            "visible_surface_point_world_xyz_m": [
+              0.48758454877084606,
+              -0.47925030020887005,
+              1.3405101039329503
+            ]
+          },
+          "blue": {
+            "color": "blue",
+            "mask_pixels": 337,
+            "center_pixel_uv": [
+              73.0,
+              36.0
+            ],
+            "median_depth_m": 0.20170599222183228,
+            "visible_surface_point_camera_xyz_m": [
+              0.02684774896916848,
+              0.0,
+              -0.20170599222183228
+            ],
+            "visible_surface_point_world_xyz_m": [
+              0.42442004652517273,
+              -0.49959826251762535,
+              1.341758178615519
+            ]
+          }
+        }
+      },
+      "success": {
+        "rgb_policy_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_success_rgb_128x72.png",
+        "rgb_10x_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_success_rgb_10x.png",
+        "depth_metres_npy": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_success_depth_m.npy",
+        "depth_visual_policy_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_success_depth_visual_128x72.png",
+        "depth_visual_10x_png": "/home/marwah/Downloads/CR10_2F85_RGBD_ColorPush_D405_PPO100k_Candidate_v1_4/artifacts/color_task_preview/target_blue_success_depth_visual_10x.png",
+        "episode_steps": 55,
+        "target_progress_m": 0.04160238445752509,
+        "wrong_cube_displacement_m": 2.9964041597107214e-10,
+        "safety_fault": null
+      }
+    }
+  ],
+  "hardware_motion_commanded": false
+}

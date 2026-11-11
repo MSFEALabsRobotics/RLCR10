@@ -1,0 +1,365 @@
+{
+  "package": "CR10_D405_PLATE_PPO_OFFLINE_READY_v0_3",
+  "physical_camera_connected": false,
+  "physical_robot_connected": false,
+  "physical_motion_possible_via_this_script": false,
+  "policy_inference_requested": true,
+  "checks": [
+    {
+      "name": "User checkpoint SHA256 and evaluation evidence",
+      "status": "PASS",
+      "details": {
+        "status": "PASS",
+        "checkpoint_steps": 100352,
+        "model": "plate_color_ppo.zip",
+        "heldout_successes": 200,
+        "heldout_episodes": 200,
+        "checkpoint_and_normalizer_hashes_verified": true,
+        "hardware_motion_commanded": false
+      }
+    },
+    {
+      "name": "Default real-world calibration/motion remain blocked",
+      "status": "PASS",
+      "details": "forward_axis_base is not calibrated"
+    },
+    {
+      "name": "Mock calibration cannot authorize physical motion",
+      "status": "PASS",
+      "details": "LIVE MOTION BLOCKED: full_robot_collision_model_validated, pusher_plate_box_clearance_validated, operator_has_verified_robot_protection, real_motion_authorized"
+    },
+    {
+      "name": "Observation schema length and bounds",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "Full generated RGB-D -> calibrated optical point -> 12D",
+      "status": "PASS",
+      "details": {
+        "red_mask_px": 121,
+        "blue_mask_px": 121,
+        "obs12": [
+          0.0,
+          0.0,
+          0.1899999976158142,
+          0.0,
+          0.1899999976158142,
+          1.0,
+          0.1899999976158142,
+          0.12349999696016312,
+          0.1899999976158142,
+          1.0,
+          1.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "Missing color depth is rejected",
+      "status": "PASS",
+      "details": "red cube lost / invalid depth"
+    },
+    {
+      "name": "Stale RGB-D frame is rejected",
+      "status": "PASS",
+      "details": "STALE_CAMERA_FRAME"
+    },
+    {
+      "name": "Invalid camera intrinsics rejected",
+      "status": "PASS",
+      "details": "invalid D405 intrinsics"
+    },
+    {
+      "name": "2 mm Euclidean action bound and task mapping",
+      "status": "PASS",
+      "details": {
+        "full_scale_diagonal_step_mm": 2.0
+      }
+    },
+    {
+      "name": "Out-of-range PPO action rejected",
+      "status": "PASS",
+      "details": "PPO action exceeds [-1,1]"
+    },
+    {
+      "name": "Overrun task bounds rejected",
+      "status": "PASS",
+      "details": "PLANAR_BOUND forward_bounds_m: 0.1920 m"
+    },
+    {
+      "name": "Missing physical workspace bounds fail closed",
+      "status": "PASS",
+      "details": "workspace_min_base_m is not calibrated"
+    },
+    {
+      "name": "Wrong-box too close for plate rejected",
+      "status": "PASS",
+      "details": "WRONG_BOX_IN_PLATE_SWEEP: lateral separation=0.045m, required=0.100m"
+    },
+    {
+      "name": "3D rigid calibration fit synthetic accuracy",
+      "status": "PASS",
+      "details": {
+        "synthetic_rmse_m": 7.65168414856311e-17
+      }
+    },
+    {
+      "name": "Dobot numeric response parser",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "Dobot controller error rejected",
+      "status": "PASS",
+      "details": "Dobot command returned error -1"
+    },
+    {
+      "name": "Mock InverseKin request and reply matches Dobot service fields",
+      "status": "PASS",
+      "details": {
+        "request_fields": [
+          "joint_near",
+          "rx",
+          "ry",
+          "rz",
+          "tool",
+          "use_joint_near",
+          "user",
+          "x",
+          "y",
+          "z"
+        ],
+        "real_ROS_calls": 0
+      }
+    },
+    {
+      "name": "Full-resolution D405 -> 128x72 preprocessing without cv2",
+      "status": "PASS",
+      "details": {
+        "native_resolution": [
+          1280,
+          720
+        ],
+        "policy_resolution": [
+          128,
+          72
+        ]
+      }
+    },
+    {
+      "name": "Mock RealSense D405 acquisition, alignment and repeated-frame rejection",
+      "status": "PASS",
+      "details": {
+        "fake_sensor": "D405",
+        "frame_rgb": [
+          1280,
+          720
+        ],
+        "color_detections": [
+          "red",
+          "blue"
+        ],
+        "repeat_detection": true,
+        "hardware_connected": false
+      }
+    },
+    {
+      "name": "Actual saved PPO inference and input sensitivity",
+      "status": "PASS",
+      "details": {
+        "red_left": [
+          1.0,
+          -1.0
+        ],
+        "red_right": [
+          1.0,
+          0.5125911831855774
+        ],
+        "source": "actual trained PPO and saved normalization"
+      }
+    },
+    {
+      "name": "Multi-step synthetic camera -> policy -> gate -> mock feedback",
+      "status": "PASS",
+      "details": {
+        "steps": 4,
+        "uses_real_checkpoint": true,
+        "ROS_calls": 0
+      }
+    },
+    {
+      "name": "Installed ROS2 Dobot V4 message schema (no connection)",
+      "status": "PASS",
+      "details": {
+        "local_generated_ros2_service_contracts": {
+          "GetPose": {
+            "user": "int32",
+            "tool": "int32"
+          },
+          "GetAngle": {},
+          "RobotMode": {},
+          "InverseKin": {
+            "x": "double",
+            "y": "double",
+            "z": "double",
+            "rx": "double",
+            "ry": "double",
+            "rz": "double",
+            "use_joint_near": "string",
+            "joint_near": "string",
+            "user": "string",
+            "tool": "string"
+          },
+          "MovL": {
+            "mode": "boolean",
+            "a": "double",
+            "b": "double",
+            "c": "double",
+            "d": "double",
+            "e": "double",
+            "f": "double",
+            "param_value": "sequence<string>"
+          }
+        },
+        "ros_node_created": false,
+        "robot_network_contact": false
+      }
+    }
+  ],
+  "synthetic_loop": {
+    "steps": 4,
+    "first_obs12": [
+      0.0,
+      0.0,
+      0.1899999976158142,
+      0.0,
+      0.1899999976158142,
+      1.0,
+      0.1899999976158142,
+      0.12349999696016312,
+      0.1899999976158142,
+      1.0,
+      1.0,
+      0.0
+    ],
+    "steps_detail": [
+      {
+        "step": 0,
+        "action2": [
+          1.0,
+          -0.7350139617919922
+        ],
+        "target_m": [
+          0.0016115174700984257,
+          -0.0011844878401940523,
+          0.9
+        ],
+        "forward_progress_mm": 1.6115174700984256,
+        "mock_feedback_error_m": 0.0,
+        "obs12": [
+          0.0,
+          0.0,
+          0.1899999976158142,
+          0.0,
+          0.1899999976158142,
+          1.0,
+          0.1899999976158142,
+          0.12349999696016312,
+          0.1899999976158142,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "step": 1,
+        "action2": [
+          1.0,
+          -0.7311350703239441
+        ],
+        "target_m": [
+          0.003226018299141733,
+          -0.0023649060173746963,
+          0.9
+        ],
+        "forward_progress_mm": 1.6145008290433072,
+        "mock_feedback_error_m": 0.0,
+        "obs12": [
+          0.001611517509445548,
+          -0.0011844878317788243,
+          0.18838848173618317,
+          0.002354856114834547,
+          0.18838848173618317,
+          1.0,
+          0.18838848173618317,
+          0.12480737268924713,
+          0.18838848173618317,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "step": 2,
+        "action2": [
+          1.0,
+          -0.7378309965133667
+        ],
+        "target_m": [
+          0.004835369622037922,
+          -0.003552335307687297,
+          0.9
+        ],
+        "forward_progress_mm": 1.609351322896189,
+        "mock_feedback_error_m": 0.0,
+        "obs12": [
+          0.003226018277928233,
+          -0.0023649060167372227,
+          0.18677398562431335,
+          0.002334674820303917,
+          0.18677398562431335,
+          1.0,
+          0.18677398562431335,
+          0.12607243657112122,
+          0.18677398562431335,
+          1.0,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "step": 3,
+        "action2": [
+          1.0,
+          -0.7338004112243652
+        ],
+        "target_m": [
+          0.006447820382980854,
+          -0.00473555233914626,
+          0.9
+        ],
+        "forward_progress_mm": 1.6124507609429315,
+        "mock_feedback_error_m": 0.0,
+        "obs12": [
+          0.004835369531065226,
+          -0.003552335314452648,
+          0.18516463041305542,
+          0.004629115574061871,
+          0.18516463041305542,
+          1.0,
+          0.18516463041305542,
+          0.1273006796836853,
+          0.18516463041305542,
+          1.0,
+          1.0,
+          0.0
+        ]
+      }
+    ],
+    "note": "Fixed synthetic boxes, moving pinhole camera, idealized mock servo; no real dynamics"
+  },
+  "passed": 22,
+  "failed": 0,
+  "status": "PASS"
+}

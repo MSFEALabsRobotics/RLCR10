@@ -1,0 +1,43 @@
+{
+  "push_pose_deg": [
+    0.0,
+    -40.0,
+    45.0,
+    -5.0,
+    20.0,
+    0.0
+  ],
+  "tcp_start_xyz_m": [
+    0.4372574350837848,
+    -0.4563709468862552,
+    1.33232579197219
+  ],
+  "tcp_forward_axis_world": [
+    0.342016368446695,
+    -0.9396939947158693,
+    -3.076790932421413e-06
+  ],
+  "cube_start_xyz_m": [
+    0.456068335348353,
+    -0.508054116595628,
+    1.3323256227486888
+  ],
+  "cube_near_face_clearance_from_nominal_tcp_m": 0.03,
+  "commanded_push_distance_m": 0.08,
+  "accepted_cartesian_waypoints": 40,
+  "gripper_cube_contact_substeps": 6,
+  "contact_geoms": {
+    "right_pad1": 6
+  },
+  "cube_motion_along_push_m": 0.06126417708964488,
+  "cube_total_motion_m": 0.062027754536893076,
+  "tcp_motion_along_push_m": 0.07887204221758713,
+  "final_tcp_tracking_error_m": 0.0013598764868274374,
+  "min_scaled_sigma": 0.08370403851692859,
+  "max_ik_position_error_m": 6.979724441056133e-05,
+  "max_ik_rotation_error_rad": 0.00010431907156504254,
+  "zero_gravity": true,
+  "placement_method": "explicit_nominal_tcp_plus_forward_axis_offset",
+  "waypoint_tracking_tolerance_m": 0.0015,
+  "waypoint_timeout_s": 2.0
+}

@@ -1,0 +1,51 @@
+{
+  "camera_model": "RealSense D405",
+  "intrinsics_status": "NOMINAL_D405_FOV_DERIVED_NOT_DEVICE_CALIBRATED",
+  "stream_convention": "depth_aligned_to_color",
+  "resolution_px": [
+    1280,
+    720
+  ],
+  "camera_matrix_px": [
+    [
+      674.4192801798159,
+      0.0,
+      640.0
+    ],
+    [
+      0.0,
+      649.4571918977125,
+      360.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "depth_unit": "m",
+  "invalid_depth_value": 0.0,
+  "background_conversion": "pixels with no segmented MuJoCo object are remapped from the far plane to 0",
+  "camera_mount_status": "PROVISIONAL_WRIST_EXTRINSIC: the D405 optical center is offset 100 mm along mount -Y and 30 mm along mount +Z toward the gripper, aimed at the initial cube center. Replace this one transform after physical measurement; it is not a hand-eye calibration claim.",
+  "snapshots": [
+    {
+      "label": "reset",
+      "rgb_png": "/home/marwah/RL-Robotics Lab/CR10_2F85_RGBD_ColorPush_D405_PPO100k_SimVerified_v1_1/artifacts/d405_preview/d405_reset_rgb.png",
+      "depth_npy_metres": "/home/marwah/RL-Robotics Lab/CR10_2F85_RGBD_ColorPush_D405_PPO100k_SimVerified_v1_1/artifacts/d405_preview/d405_reset_depth_m.npy",
+      "depth_visual_png": "/home/marwah/RL-Robotics Lab/CR10_2F85_RGBD_ColorPush_D405_PPO100k_SimVerified_v1_1/artifacts/d405_preview/d405_reset_depth_visual.png",
+      "valid_depth_fraction": 0.6139876302083334,
+      "depth_min_m": 0.08795993030071259,
+      "depth_max_m": 0.8195450305938721
+    },
+    {
+      "label": "success",
+      "rgb_png": "/home/marwah/RL-Robotics Lab/CR10_2F85_RGBD_ColorPush_D405_PPO100k_SimVerified_v1_1/artifacts/d405_preview/d405_success_rgb.png",
+      "depth_npy_metres": "/home/marwah/RL-Robotics Lab/CR10_2F85_RGBD_ColorPush_D405_PPO100k_SimVerified_v1_1/artifacts/d405_preview/d405_success_depth_m.npy",
+      "depth_visual_png": "/home/marwah/RL-Robotics Lab/CR10_2F85_RGBD_ColorPush_D405_PPO100k_SimVerified_v1_1/artifacts/d405_preview/d405_success_depth_visual.png",
+      "valid_depth_fraction": 0.6292035590277778,
+      "depth_min_m": 0.08795987069606781,
+      "depth_max_m": 0.7602565288543701
+    }
+  ],
+  "hardware_motion_commanded": false
+}

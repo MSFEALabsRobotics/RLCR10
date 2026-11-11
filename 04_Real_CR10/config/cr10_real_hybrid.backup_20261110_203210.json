@@ -1,0 +1,15 @@
+{
+  "camera_origin_from_flange_base_m": null,
+  "plate_contact_from_flange_base_m": null,
+  "workspace_min_base_m": null,
+  "workspace_max_base_m": null,
+  "verified_joint_limits_deg": null,
+  "box_width_m": null,
+  "handover_gap_m": null,
+  "lateral_tolerance_m": null,
+  "vertical_tolerance_m": null,
+  "physical_geometry_verified": false,
+  "independent_camera_validation_passed": false,
+  "full_path_clearance_verified": false,
+  "robot_protection_verified": false
+}

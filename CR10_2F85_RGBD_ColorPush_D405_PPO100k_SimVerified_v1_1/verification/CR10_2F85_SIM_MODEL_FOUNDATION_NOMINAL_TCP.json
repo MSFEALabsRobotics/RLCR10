@@ -1,0 +1,79 @@
+{
+  "verification_level": "CR10_2F85_SIM_MODEL_FOUNDATION_NOMINAL_TCP",
+  "model": {
+    "nq": 21,
+    "nv": 20,
+    "nu": 7
+  },
+  "arm_home_deg": [
+    0.0,
+    -40.0,
+    45.0,
+    0.0,
+    55.0,
+    0.0
+  ],
+  "nominal_tcp": {
+    "xyz_m_in_mount_frame": [
+      0.0,
+      0.0,
+      0.174
+    ],
+    "rpy_rad_in_mount_frame": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "world_home_m": [
+      0.5602253201602336,
+      -0.352980226521012,
+      1.3520102900431559
+    ],
+    "offset_norm_m": 0.17400000000000002,
+    "local_transform_error_m": 0.0,
+    "status": "NOMINAL_VENDOR_PUBLISHED_NOT_PHYSICALLY_VERIFIED",
+    "source": "Robotiq 2F-85 & 2F-140 Instruction Manual: nominal 2F-85 TCP (0,0,174) mm for the standard single-gripper setup with coupling included.",
+    "menagerie_pinch_separation_m_diagnostic": 0.018200000000000133
+  },
+  "gripper": {
+    "open_driver_rad": [
+      0.002603409653467048,
+      0.002603409484839947
+    ],
+    "closed_driver_rad": [
+      0.7878535025357126,
+      0.7878540860716333
+    ],
+    "closed_driver_symmetry_error_rad": 5.835359206951551e-07,
+    "actuator_ctrlrange": [
+      0.0,
+      255.0
+    ]
+  },
+  "fk_probe_motion_m": 0.0331042336437645,
+  "mount_assumption": "STANDARD_COAXIAL_IDENTITY_INDEXING_ASSUMPTION",
+  "mount_status": "NOMINAL_STANDARD_COAXIAL_MOUNT_ASSUMPTION: identity mount transform at CR10 Link6/flange reference; physical lab indexing remains unverified.",
+  "dynamics_status": "SIMULATION_CONTACT_ISOLATION_ONLY: Menagerie 2F-85 mechanism/contact is source-locked; CR10 servos are development abstractions; the known-cube gate intentionally sets gravity to zero to isolate contact mechanics.",
+  "hardware_motion_commanded": false,
+  "claims": {
+    "validated": [
+      "exact source locks",
+      "CR10+2F85 MuJoCo compile",
+      "six named CR10 joints",
+      "one Menagerie 2F-85 actuator",
+      "2F-85 open/close mechanism response",
+      "left/right driver coupling",
+      "nominal Robotiq 2F-85 TCP convention [0,0,0.174] m encoded in mount frame",
+      "nominal TCP attached to CR10 kinematic chain"
+    ],
+    "not_validated": [
+      "physical CR10-to-2F85 mount/index orientation",
+      "physical lab TCP calibration/verification",
+      "identified CR10 dynamics",
+      "physical grasp/contact fidelity",
+      "hardware gripper communication",
+      "hardware arm motion",
+      "RL task"
+    ]
+  }
+}

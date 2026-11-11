@@ -1,0 +1,4439 @@
+{
+  "environment_id": "CR10-2F85-RGBDColorTargetPush-v0",
+  "evaluation_purpose": "Held-out simulation evaluation of the new plastic-plate policy",
+  "model": "/home/marwah/Downloads/CR10_D405_PLATE_ColorPush_SIM_v0_3/artifacts/plate_color_ppo.zip",
+  "normalizer": "/home/marwah/Downloads/CR10_D405_PLATE_ColorPush_SIM_v0_3/artifacts/plate_color_ppo_vecnormalize.pkl",
+  "camera_model": "RealSense D405",
+  "camera_name": "d405_aligned_rgbd",
+  "intrinsics_status": "NOMINAL_D405_FOV_DERIVED_NOT_DEVICE_CALIBRATED",
+  "camera_matrix_px": [
+    [
+      674.4192801798159,
+      0.0,
+      640.0
+    ],
+    [
+      0.0,
+      649.4571918977125,
+      360.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "seed": 20007,
+  "evaluation_episodes": 200,
+  "evaluation_successes": 200,
+  "episodes": [
+    {
+      "episode": 1,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.04038603653512446,
+      "wrong_cube_displacement_m": 3.383229605910131e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 2,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04007631318597643,
+      "wrong_cube_displacement_m": 8.951592314670066e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9236923456192017,
+          0.9845840087476766,
+          1.0
+        ],
+        [
+          0.9072847366333008,
+          0.996559018234037,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 3,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.04084869420788348,
+      "wrong_cube_displacement_m": 8.357420768717529e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43035781383514404,
+          0.9886071562767029,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 4,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04084910502309924,
+      "wrong_cube_displacement_m": 3.1125244422374504e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7171687483787537,
+          0.9479955619779127,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.997986461581855,
+          -0.9468533396720886
+        ]
+      ]
+    },
+    {
+      "episode": 5,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04015968016953554,
+      "wrong_cube_displacement_m": 3.063011165522907e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 6,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 62,
+      "target_progress_m": 0.04050365689285986,
+      "wrong_cube_displacement_m": 1.026418752585396e-09,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9628849029541016,
+          0.9968390868556115,
+          1.0
+        ],
+        [
+          0.8344427347183228,
+          0.9912563350892836,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 7,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.041025204867116,
+      "wrong_cube_displacement_m": 8.91751605148444e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4270707368850708,
+          0.9465890200632923,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 8,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04119199295344748,
+      "wrong_cube_displacement_m": 3.301672812268761e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7475196123123169,
+          0.9579242550093552,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9624089968615565,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 9,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.04150008040593269,
+      "wrong_cube_displacement_m": 2.772236900829135e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9790571928024292,
+          0.9974403259705524,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 10,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.040179339590723485,
+      "wrong_cube_displacement_m": 7.780456407176146e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8428987860679626,
+          0.9903517593728736,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 11,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04152649473130268,
+      "wrong_cube_displacement_m": 9.06144268940954e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4450609087944031,
+          0.9897233501628593,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 12,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04114535000163758,
+      "wrong_cube_displacement_m": 3.076801933187839e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7706708908081055,
+          0.9625992980870334,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9635497158223932,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 13,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.041092074110395005,
+      "wrong_cube_displacement_m": 3.313775406607666e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9997039372270757,
+          -0.9837165474891663
+        ]
+      ]
+    },
+    {
+      "episode": 14,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04082031666268617,
+      "wrong_cube_displacement_m": 9.802447571275984e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9281237125396729,
+          0.9939619646234027,
+          1.0
+        ],
+        [
+          0.8980646729469299,
+          0.9959080764802836,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 15,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 45,
+      "target_progress_m": 0.04056385773691022,
+      "wrong_cube_displacement_m": 7.424735929659365e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 16,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04089350607002922,
+      "wrong_cube_displacement_m": 3.3474416251429643e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7496662139892578,
+          0.9618810887994438,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9298426221156942,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 17,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04143162147654299,
+      "wrong_cube_displacement_m": 2.676248855691792e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 18,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.04034013808761402,
+      "wrong_cube_displacement_m": 9.46816113035176e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9551758766174316,
+          0.9895515149099785,
+          1.0
+        ],
+        [
+          0.9355801939964294,
+          0.9981892119374192,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 19,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04002310676974941,
+      "wrong_cube_displacement_m": 8.677860792697331e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 20,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04137742634933792,
+      "wrong_cube_displacement_m": 3.6628104375351497e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.764398455619812,
+          0.9678200705576752,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.890191748990851,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 21,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.04014371450772018,
+      "wrong_cube_displacement_m": 2.622600705294785e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9134812355041504,
+          0.9812857331113612,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 22,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04034885263613276,
+      "wrong_cube_displacement_m": 8.696411163709337e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9071418046951294,
+          0.9776253321996102,
+          1.0
+        ],
+        [
+          0.8780035376548767,
+          0.9932505121597877,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 23,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.04122290139725961,
+      "wrong_cube_displacement_m": 7.600083890948233e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 24,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.040657241499845516,
+      "wrong_cube_displacement_m": 3.0319292584063146e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7190344929695129,
+          0.9480984890670107,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9997896301118951,
+          -0.9880089163780212
+        ]
+      ]
+    },
+    {
+      "episode": 25,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04015925277984809,
+      "wrong_cube_displacement_m": 2.9116130449791463e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 26,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04023280782149953,
+      "wrong_cube_displacement_m": 9.168480896318045e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9522310495376587,
+          0.9909381357106295,
+          1.0
+        ],
+        [
+          0.9714780449867249,
+          0.999247652834112,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 27,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.0409999379591852,
+      "wrong_cube_displacement_m": 8.063177869000888e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 28,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.040057410669658323,
+      "wrong_cube_displacement_m": 2.5324801713779295e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7884464859962463,
+          0.962475689748923,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 29,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.04036096026826884,
+      "wrong_cube_displacement_m": 2.609416451651549e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9438410401344299,
+          0.993114155657748,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 30,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04073745582952115,
+      "wrong_cube_displacement_m": 8.919510205963593e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9078394174575806,
+          0.9738254592103778,
+          1.0
+        ],
+        [
+          0.8678954839706421,
+          0.9928089942572251,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 31,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04115500913831459,
+      "wrong_cube_displacement_m": 8.865176051220782e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.42403095960617065,
+          0.9297839560598697,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 32,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 61,
+      "target_progress_m": 0.04039189850856373,
+      "wrong_cube_displacement_m": 3.809470916264663e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7450151443481445,
+          0.9644715746895212,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.8913236016132793,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 33,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04071813241740548,
+      "wrong_cube_displacement_m": 3.115137192919238e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 34,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 44,
+      "target_progress_m": 0.04017502149991422,
+      "wrong_cube_displacement_m": 7.284551521800314e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9973730444908142,
+          0.9999402964657004,
+          1.0
+        ],
+        [
+          0.8541990518569946,
+          0.9903809238563884,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 35,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.0404546781192531,
+      "wrong_cube_displacement_m": 9.571740130317317e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4558755159378052,
+          0.9809654281850446,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 36,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04130750827797719,
+      "wrong_cube_displacement_m": 3.363570788501781e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7243667840957642,
+          0.9537891109110945,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9612041196580661,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 37,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04153103289833167,
+      "wrong_cube_displacement_m": 3.0024767462478897e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 38,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.04091888360411547,
+      "wrong_cube_displacement_m": 7.617774204082037e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8563368320465088,
+          0.990455440852953,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 39,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04105281777720145,
+      "wrong_cube_displacement_m": 8.919267351477296e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4509263038635254,
+          0.979305125632376,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 40,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.04026327123878788,
+      "wrong_cube_displacement_m": 3.013483442916883e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7467584609985352,
+          0.954587248819215,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9993817689163345,
+          -0.9653790593147278
+        ]
+      ]
+    },
+    {
+      "episode": 41,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04058262041400915,
+      "wrong_cube_displacement_m": 3.215682925646858e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 42,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.040867401112860545,
+      "wrong_cube_displacement_m": 8.92764224379374e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8987987637519836,
+          0.9710098639974054,
+          1.0
+        ],
+        [
+          0.9170684218406677,
+          0.9964957585874593,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 43,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.041158307703783634,
+      "wrong_cube_displacement_m": 7.772374102246578e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 44,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04114391566715764,
+      "wrong_cube_displacement_m": 2.802627813356975e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7462437152862549,
+          0.9541590123806359,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 45,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.041312447801202086,
+      "wrong_cube_displacement_m": 3.699089881396796e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9850637316703796,
+          -0.8280849456787109
+        ]
+      ]
+    },
+    {
+      "episode": 46,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04094315539896416,
+      "wrong_cube_displacement_m": 9.125379056592735e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9156256914138794,
+          0.9819323497789877,
+          1.0
+        ],
+        [
+          0.9501818418502808,
+          0.9987574319044749,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 47,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.04099965370481891,
+      "wrong_cube_displacement_m": 9.317276615436931e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4431178569793701,
+          0.9900556760174888,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 48,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04022049600193536,
+      "wrong_cube_displacement_m": 3.0825609088737985e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7786108255386353,
+          0.965189067883925,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9632135553793474,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 49,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04014756473537349,
+      "wrong_cube_displacement_m": 3.022106594227382e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 50,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 60,
+      "target_progress_m": 0.04089183912385571,
+      "wrong_cube_displacement_m": 9.954997476466933e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9559465646743774,
+          0.9963990867137908,
+          1.0
+        ],
+        [
+          0.84965580701828,
+          0.9925441473722458,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 51,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.04141195905827924,
+      "wrong_cube_displacement_m": 9.362302781006889e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4507896304130554,
+          0.9707616865634918,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 52,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 60,
+      "target_progress_m": 0.04009304034632073,
+      "wrong_cube_displacement_m": 3.500676153678959e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7275732159614563,
+          0.9569469650586446,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9520333757003149,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 53,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04035827753194582,
+      "wrong_cube_displacement_m": 3.5592811169602625e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 54,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04023117281497514,
+      "wrong_cube_displacement_m": 8.900714530304679e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9168702363967896,
+          0.9796073965306552,
+          1.0
+        ],
+        [
+          0.9290481209754944,
+          0.9970322363781479,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 55,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04057894826784024,
+      "wrong_cube_displacement_m": 9.681187212306188e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43015187978744507,
+          0.951724389503742,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 56,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 61,
+      "target_progress_m": 0.040609985255476426,
+      "wrong_cube_displacement_m": 3.322597366419872e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.690444827079773,
+          0.9421470536560309,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9915374673780848,
+          -0.8815670609474182
+        ]
+      ]
+    },
+    {
+      "episode": 57,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.041112598642949985,
+      "wrong_cube_displacement_m": 2.8160837816156415e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 58,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.04080881219068944,
+      "wrong_cube_displacement_m": 8.374373975685739e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.873136579990387,
+          0.9555940210819245,
+          1.0
+        ],
+        [
+          0.8720404505729675,
+          0.9932992041110993,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 59,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.0408932266736487,
+      "wrong_cube_displacement_m": 9.571806018577343e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 60,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04001709869125911,
+      "wrong_cube_displacement_m": 3.3487702227696823e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7412409782409668,
+          0.9619194001987063,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9567934511036709,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 61,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.040098615241414566,
+      "wrong_cube_displacement_m": 2.874747968102886e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 62,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04129626386162134,
+      "wrong_cube_displacement_m": 8.697153402477088e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9099252223968506,
+          0.9779644310474396,
+          1.0
+        ],
+        [
+          0.9371250867843628,
+          0.9979261503769801,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 63,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.041352390657435144,
+      "wrong_cube_displacement_m": 9.526561269586447e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43690943717956543,
+          0.9508071039852343,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 64,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.040117748187723845,
+      "wrong_cube_displacement_m": 2.4323985746427864e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8035248517990112,
+          0.953226793071498,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 65,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.040019599539299656,
+      "wrong_cube_displacement_m": 3.24063849447777e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 66,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.040002394298334736,
+      "wrong_cube_displacement_m": 9.731214780137787e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.938289999961853,
+          0.9948479820942057,
+          1.0
+        ],
+        [
+          0.8714780807495117,
+          0.9946429112861896,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 67,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04017367276333918,
+      "wrong_cube_displacement_m": 7.945876913603573e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 68,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.04099340039207963,
+      "wrong_cube_displacement_m": 2.5893095628671436e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7786824107170105,
+          0.9605126149800359,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 69,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.0409578211721731,
+      "wrong_cube_displacement_m": 2.612699967110013e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9416179656982422,
+          0.9895197990092826,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 70,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 60,
+      "target_progress_m": 0.04073141068010825,
+      "wrong_cube_displacement_m": 1.005114184437302e-09,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9377938508987427,
+          0.9936670829852422,
+          1.0
+        ],
+        [
+          0.8479515910148621,
+          0.9925431738297145,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 71,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04071520677215191,
+      "wrong_cube_displacement_m": 8.952703570642147e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.44237345457077026,
+          0.9894787444258636,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 72,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.0406332207939196,
+      "wrong_cube_displacement_m": 3.2353691235639333e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7783332467079163,
+          0.9663746761424201,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9283107295632362,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 73,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.040278155601732236,
+      "wrong_cube_displacement_m": 3.118712246571834e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 74,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.040468990195305525,
+      "wrong_cube_displacement_m": 9.898866907798532e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.966858446598053,
+          0.9970663078760696,
+          1.0
+        ],
+        [
+          0.8401313424110413,
+          0.9921970609891213,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 75,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04088835518787121,
+      "wrong_cube_displacement_m": 8.170177980821216e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 76,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.040349992552347266,
+      "wrong_cube_displacement_m": 3.2942684259528145e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7417937517166138,
+          0.9585689501515751,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9597819098110857,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 77,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04001524525836727,
+      "wrong_cube_displacement_m": 3.666631412761607e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9931103122436394,
+          -0.891598641872406
+        ]
+      ]
+    },
+    {
+      "episode": 78,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 45,
+      "target_progress_m": 0.04045480793397089,
+      "wrong_cube_displacement_m": 7.446451586914084e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8528684973716736,
+          0.99005217022366,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 79,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04131556419447602,
+      "wrong_cube_displacement_m": 9.594657293199322e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4395846724510193,
+          0.9710855227092217,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 80,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.040475611602631606,
+      "wrong_cube_displacement_m": 2.651256976669278e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7812769412994385,
+          0.962534235715866,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 81,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.040873640933852734,
+      "wrong_cube_displacement_m": 2.7613529695378295e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 82,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04084135616246176,
+      "wrong_cube_displacement_m": 9.78999761930042e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9348572492599487,
+          0.9941300274962086,
+          1.0
+        ],
+        [
+          0.9011619091033936,
+          0.9958855216786012,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 83,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04074393985675351,
+      "wrong_cube_displacement_m": 9.096432561416888e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43501561880111694,
+          0.9895373262740947,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 84,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04071394581610506,
+      "wrong_cube_displacement_m": 2.819953874747714e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7648754119873047,
+          0.9608479580789242,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 85,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 60,
+      "target_progress_m": 0.04148762222458753,
+      "wrong_cube_displacement_m": 3.7088597993500845e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9918518314758936,
+          -0.8618432879447937
+        ]
+      ]
+    },
+    {
+      "episode": 86,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04105874947220332,
+      "wrong_cube_displacement_m": 9.051732983148578e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9258509874343872,
+          0.9805679078455325,
+          1.0
+        ],
+        [
+          0.8830989003181458,
+          0.9935442253395363,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 87,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04098359549573924,
+      "wrong_cube_displacement_m": 7.925680843334316e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 88,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.040171610825898735,
+      "wrong_cube_displacement_m": 2.634733931753825e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7861858606338501,
+          0.9637275767326355,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 89,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.041386996160723305,
+      "wrong_cube_displacement_m": 2.613217273362958e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9882651567459106,
+          0.998742031290176,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 90,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.04123300603787055,
+      "wrong_cube_displacement_m": 9.348215216783636e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9433040618896484,
+          0.9860886484384537,
+          1.0
+        ],
+        [
+          0.9344562888145447,
+          0.9978627530591828,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 91,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04045527268043623,
+      "wrong_cube_displacement_m": 8.780894677790874e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 92,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.040755824059998495,
+      "wrong_cube_displacement_m": 2.5382348105369167e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7817404270172119,
+          0.9543303785224756,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 93,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04085110194199882,
+      "wrong_cube_displacement_m": 3.103720634059534e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 94,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04111799621765836,
+      "wrong_cube_displacement_m": 9.016304084178719e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9274215698242188,
+          0.983172035879559,
+          1.0
+        ],
+        [
+          0.9435154795646667,
+          0.998352830056791,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 95,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 44,
+      "target_progress_m": 0.04126573583075658,
+      "wrong_cube_displacement_m": 7.268837977851891e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 96,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04023018227299431,
+      "wrong_cube_displacement_m": 3.170989376093956e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7344249486923218,
+          0.950730732802687,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.994838258315777,
+          -0.887844443321228
+        ]
+      ]
+    },
+    {
+      "episode": 97,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.04092038460836413,
+      "wrong_cube_displacement_m": 3.4636138835810746e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 98,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04050792250765958,
+      "wrong_cube_displacement_m": 8.536881378534069e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8758776187896729,
+          0.9616230340564952,
+          1.0
+        ],
+        [
+          0.9659650325775146,
+          0.9991770129577786,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 99,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.04006675675818733,
+      "wrong_cube_displacement_m": 8.05799030456888e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 100,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04016201123926663,
+      "wrong_cube_displacement_m": 2.936666111608508e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7472659349441528,
+          0.9549898971210826,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 101,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04001902025927061,
+      "wrong_cube_displacement_m": 3.617803964961412e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 102,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04044102250823153,
+      "wrong_cube_displacement_m": 8.950033599179487e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8981106877326965,
+          0.9704462795887353,
+          1.0
+        ],
+        [
+          0.9431751370429993,
+          0.9982396724089136,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 103,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.04022055944729999,
+      "wrong_cube_displacement_m": 7.73701152129725e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 104,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.0411218384104495,
+      "wrong_cube_displacement_m": 3.343929581560686e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7446929216384888,
+          0.9624634755068812,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.928563903118002,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 105,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04089277676390436,
+      "wrong_cube_displacement_m": 3.2161393205977265e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 106,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.041092051375321584,
+      "wrong_cube_displacement_m": 9.577221389224168e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.944469690322876,
+          0.9917620368171156,
+          1.0
+        ],
+        [
+          0.8883633017539978,
+          0.994818577640935,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 107,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.040179759537162386,
+      "wrong_cube_displacement_m": 8.985607490520799e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4428114891052246,
+          0.9744988999984883,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 108,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.04033263774103008,
+      "wrong_cube_displacement_m": 2.656416875727429e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7949403524398804,
+          0.965346268415451,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 109,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.040474974075789386,
+      "wrong_cube_displacement_m": 2.680965690070349e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 110,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04067473175214364,
+      "wrong_cube_displacement_m": 9.271906749928424e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9296973943710327,
+          0.9862282286990772,
+          1.0
+        ],
+        [
+          0.9389982223510742,
+          0.9983981880274686,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 111,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04141545090187285,
+      "wrong_cube_displacement_m": 8.736041991632282e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4318799376487732,
+          0.9781847859804447,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 112,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04097694496603621,
+      "wrong_cube_displacement_m": 2.5217769689643705e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.788415253162384,
+          0.9550669901072979,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 113,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.040201054004081416,
+      "wrong_cube_displacement_m": 2.5379035507274055e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8822572231292725,
+          0.9662201534146848,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 114,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.04049661208759597,
+      "wrong_cube_displacement_m": 7.607479568219934e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8552100658416748,
+          0.9906140462211941,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 115,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04143864963758867,
+      "wrong_cube_displacement_m": 8.614782833599657e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.45048367977142334,
+          0.9892251701915965,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 116,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.0406594695860695,
+      "wrong_cube_displacement_m": 3.297388118639259e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7754181623458862,
+          0.9674003030124464,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9275299383882891,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 117,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04076674017547403,
+      "wrong_cube_displacement_m": 2.7321050821624103e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9909344911575317,
+          0.9994203858077526,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 118,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04069273011431669,
+      "wrong_cube_displacement_m": 9.002617240360325e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9191856384277344,
+          0.9794859709563078,
+          1.0
+        ],
+        [
+          0.9423946142196655,
+          0.9982419345113966,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 119,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04022930121770072,
+      "wrong_cube_displacement_m": 8.837665452213956e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 120,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 61,
+      "target_progress_m": 0.041453112331530054,
+      "wrong_cube_displacement_m": 3.4804061689309126e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7164709568023682,
+          0.9502317221438299,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9560213294185576,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 121,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.040977195253812514,
+      "wrong_cube_displacement_m": 3.2936033409113585e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 122,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.04132738977970075,
+      "wrong_cube_displacement_m": 8.088455560449105e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8316248655319214,
+          0.9891304020978966,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 123,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.041158058196116655,
+      "wrong_cube_displacement_m": 8.941226797566888e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.44673675298690796,
+          0.9791265602381725,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 124,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04041281107721744,
+      "wrong_cube_displacement_m": 2.7222458574301046e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7881306409835815,
+          0.9657642701092888,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 125,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04030418486500852,
+      "wrong_cube_displacement_m": 3.574044147371925e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9989142356247738,
+          -0.9560369849205017
+        ]
+      ]
+    },
+    {
+      "episode": 126,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04060163684546627,
+      "wrong_cube_displacement_m": 8.535699470396524e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8866395950317383,
+          0.9627902379222945,
+          1.0
+        ],
+        [
+          0.9418942332267761,
+          0.9978272482460621,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 127,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04014969414279845,
+      "wrong_cube_displacement_m": 9.1571218005539e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.44671112298965454,
+          0.9799181352962147,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 128,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.040612511281152064,
+      "wrong_cube_displacement_m": 2.880922691728177e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7450384497642517,
+          0.9558585871148992,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 129,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.040249099961644864,
+      "wrong_cube_displacement_m": 2.7742841954216244e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9768022298812866,
+          0.9972382759561345,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 130,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.041115394211749604,
+      "wrong_cube_displacement_m": 9.470068223562227e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9708626866340637,
+          0.9967385289961832,
+          1.0
+        ],
+        [
+          0.8574432730674744,
+          0.9925753463778579,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 131,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.04114354756140821,
+      "wrong_cube_displacement_m": 8.494362638508152e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 132,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.04100800874864547,
+      "wrong_cube_displacement_m": 2.594261188852824e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7858197689056396,
+          0.9626324712013712,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 133,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 46,
+      "target_progress_m": 0.040136386875900085,
+      "wrong_cube_displacement_m": 2.5326934170235606e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9181226491928101,
+          0.9817511050597482,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 134,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.041104810076054994,
+      "wrong_cube_displacement_m": 8.943729945471e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9255760908126831,
+          0.9834597009532856,
+          1.0
+        ],
+        [
+          0.872673511505127,
+          0.9927505985745844,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 135,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.040798344719738394,
+      "wrong_cube_displacement_m": 9.760843918340146e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4607912302017212,
+          0.9818110405388525,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 136,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.040806368359696345,
+      "wrong_cube_displacement_m": 2.5149479217448755e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7753981351852417,
+          0.9320713480313619,
+          0.9809748530387878
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 137,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.04003959095210281,
+      "wrong_cube_displacement_m": 2.799680103901297e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 138,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.0410467859505174,
+      "wrong_cube_displacement_m": 2.3120511047269623e-17,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.899868369102478,
+          0.9746233247361094,
+          1.0
+        ],
+        [
+          0.9764149188995361,
+          0.9995504561460243,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 139,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 50,
+      "target_progress_m": 0.0407791212493242,
+      "wrong_cube_displacement_m": 8.457326173022093e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43703997135162354,
+          0.9887407994270325,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 140,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.04074745263702479,
+      "wrong_cube_displacement_m": 2.4629154794708776e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.785161018371582,
+          0.9333885096489115,
+          0.9806082248687744
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 141,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.041423923785880064,
+      "wrong_cube_displacement_m": 2.793645619141867e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 142,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04099071719857023,
+      "wrong_cube_displacement_m": 8.680075961861642e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8886417150497437,
+          0.9674341208659686,
+          1.0
+        ],
+        [
+          0.9510031342506409,
+          0.9986610217736318,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 143,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.040075381403749326,
+      "wrong_cube_displacement_m": 9.874860954160542e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.437993586063385,
+          0.9715688925678447,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 144,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.040474580572269415,
+      "wrong_cube_displacement_m": 3.1081621748195037e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.723397970199585,
+          0.9478726058170713,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.997625182414877,
+          -0.9347859025001526
+        ]
+      ]
+    },
+    {
+      "episode": 145,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.040838624348588176,
+      "wrong_cube_displacement_m": 2.956884573605055e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 146,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.04025624011643091,
+      "wrong_cube_displacement_m": 7.769272681439529e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8374223709106445,
+          0.9896171524169597,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 147,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04051490779524559,
+      "wrong_cube_displacement_m": 8.610690104281483e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43331456184387207,
+          0.9667163514623455,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 148,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 61,
+      "target_progress_m": 0.04040376680468625,
+      "wrong_cube_displacement_m": 3.4184721764540597e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7044702768325806,
+          0.9450946284122155,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9851483184783185,
+          -0.8157424926757812
+        ]
+      ]
+    },
+    {
+      "episode": 149,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.041457249488390524,
+      "wrong_cube_displacement_m": 3.400500314306557e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 150,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.041349943173445605,
+      "wrong_cube_displacement_m": 9.593319185990335e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9562946557998657,
+          0.9921392390602514,
+          1.0
+        ],
+        [
+          0.9188745021820068,
+          0.9975299793377257,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 151,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.04036903626122889,
+      "wrong_cube_displacement_m": 7.772097826130019e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 152,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04077198014899019,
+      "wrong_cube_displacement_m": 2.8212408036722433e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7955636382102966,
+          0.9672683126786176,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9607843137254902,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 153,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.041030046638877056,
+      "wrong_cube_displacement_m": 2.696167534029088e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9821444153785706,
+          0.9986675940454006,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 154,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04064176370687768,
+      "wrong_cube_displacement_m": 8.832819665830091e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9235528111457825,
+          0.9802090784288803,
+          1.0
+        ],
+        [
+          0.9078026413917542,
+          0.9957515192481706,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 155,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.0411178858296715,
+      "wrong_cube_displacement_m": 8.074672912205159e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 156,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04003415585605635,
+      "wrong_cube_displacement_m": 2.545347866392334e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8108444809913635,
+          0.9684489493568739,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 157,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.041263980282870205,
+      "wrong_cube_displacement_m": 3.03458441272933e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 158,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.0408720683812266,
+      "wrong_cube_displacement_m": 9.144586380664868e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9404716491699219,
+          0.9891019387678667,
+          1.0
+        ],
+        [
+          0.9066461324691772,
+          0.996774114261974,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 159,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04047240241727529,
+      "wrong_cube_displacement_m": 8.639160178502057e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 160,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04011458365927419,
+      "wrong_cube_displacement_m": 2.5231811196778215e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7798202037811279,
+          0.956311417122682,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 161,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04020889160408297,
+      "wrong_cube_displacement_m": 3.5434828950297964e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 162,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04047300003607713,
+      "wrong_cube_displacement_m": 8.83082488473595e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9107056260108948,
+          0.9774972773947805,
+          1.0
+        ],
+        [
+          0.9160516262054443,
+          0.9965518353120336,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 163,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 60,
+      "target_progress_m": 0.04044195893289318,
+      "wrong_cube_displacement_m": 9.992099390057521e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43864941596984863,
+          0.9356432219346364,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 164,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.04020647936807602,
+      "wrong_cube_displacement_m": 3.087222919109823e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7330087423324585,
+          0.9510036037679304,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9975625349764239,
+          -0.9303877949714661
+        ]
+      ]
+    },
+    {
+      "episode": 165,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.040827859925159374,
+      "wrong_cube_displacement_m": 2.668149997599541e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9998047351837158,
+          0.9999959319829941,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 166,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.041341645494957356,
+      "wrong_cube_displacement_m": 7.776792216933182e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8480938673019409,
+          0.9900124719802369,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 167,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04098429663629555,
+      "wrong_cube_displacement_m": 9.18744477812684e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43254154920578003,
+          0.9543376196514476,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 168,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.041238779746461854,
+      "wrong_cube_displacement_m": 3.553852522909951e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7733188271522522,
+          0.9693026686536854,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.8936658131665197,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 169,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.040263044659758725,
+      "wrong_cube_displacement_m": 3.4927299664784757e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 170,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04102137103735881,
+      "wrong_cube_displacement_m": 7.926612384630561e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8504721522331238,
+          0.9904073253273964,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 171,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 44,
+      "target_progress_m": 0.0408250989273796,
+      "wrong_cube_displacement_m": 7.286148672326944e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 172,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04120951532726726,
+      "wrong_cube_displacement_m": 2.5232995855286703e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7963217496871948,
+          0.960145844767491,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 173,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04024424085791992,
+      "wrong_cube_displacement_m": 3.0921462815752923e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 174,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.04027203066905391,
+      "wrong_cube_displacement_m": 8.058447820276606e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.8422309756278992,
+          0.9903483913869274,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 175,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04048800031402623,
+      "wrong_cube_displacement_m": 8.787277240126537e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 176,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.04089548453886876,
+      "wrong_cube_displacement_m": 3.007642508451798e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7465180158615112,
+          0.9549850629908698,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9981212988495827,
+          -0.9384647607803345
+        ]
+      ]
+    },
+    {
+      "episode": 177,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.041290993308847876,
+      "wrong_cube_displacement_m": 2.588452371860122e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8955996632575989,
+          0.9736693159062811,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 178,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 55,
+      "target_progress_m": 0.04046838575565429,
+      "wrong_cube_displacement_m": 9.226310685061297e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9377318620681763,
+          0.9888523871248419,
+          1.0
+        ],
+        [
+          0.9002363085746765,
+          0.9962688966230913,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 179,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04082141949684928,
+      "wrong_cube_displacement_m": 8.916619890041383e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.43211477994918823,
+          0.9373512852866694,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 180,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 57,
+      "target_progress_m": 0.04131301205790226,
+      "wrong_cube_displacement_m": 3.296816316603e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7627794146537781,
+          0.9659931691069352,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9274223478216874,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 181,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.04100812958372385,
+      "wrong_cube_displacement_m": 2.636265304812209e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9446988105773926,
+          0.9922232716641528,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 182,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.040651559587766374,
+      "wrong_cube_displacement_m": 9.111568114224583e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.929853081703186,
+          0.9857115204687472,
+          1.0
+        ],
+        [
+          0.9311450123786926,
+          0.9973557591438293,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 183,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.040113140494909966,
+      "wrong_cube_displacement_m": 8.87979814609146e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4527202844619751,
+          0.9896739676313581,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 184,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 61,
+      "target_progress_m": 0.04098965789571442,
+      "wrong_cube_displacement_m": 3.784141195331753e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7424694299697876,
+          0.963936312276809,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.8913140961381255,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 185,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04103019053649038,
+      "wrong_cube_displacement_m": 2.880810038881432e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 186,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04123246558662474,
+      "wrong_cube_displacement_m": 8.549003406091182e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8728387951850891,
+          0.957529789092494,
+          1.0
+        ],
+        [
+          0.9652151465415955,
+          0.999112187647352,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 187,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 58,
+      "target_progress_m": 0.04117466824367963,
+      "wrong_cube_displacement_m": 9.753133990678023e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.46186256408691406,
+          0.9907217683463261,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 188,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04039708197632676,
+      "wrong_cube_displacement_m": 3.680609017446416e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7753554582595825,
+          0.9703256316104177,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.8894808241876505,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 189,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.040779614465049706,
+      "wrong_cube_displacement_m": 3.6377154869327787e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9965794692605229,
+          -0.9107949733734131
+        ]
+      ]
+    },
+    {
+      "episode": 190,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 52,
+      "target_progress_m": 0.04115195506922983,
+      "wrong_cube_displacement_m": 8.765076274001167e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8848584890365601,
+          0.9655541983934549,
+          1.0
+        ],
+        [
+          0.9280868172645569,
+          0.9969770851043555,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 191,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 47,
+      "target_progress_m": 0.040107029324432546,
+      "wrong_cube_displacement_m": 7.77307848369891e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 192,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 48,
+      "target_progress_m": 0.04081032627792033,
+      "wrong_cube_displacement_m": 2.526097373253042e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7717676162719727,
+          0.9400599834819635,
+          0.9937559962272644
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 193,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04081246124877944,
+      "wrong_cube_displacement_m": 3.6504494357457054e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.9936084615982185,
+          -0.8813404440879822
+        ]
+      ]
+    },
+    {
+      "episode": 194,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 49,
+      "target_progress_m": 0.04114940095160235,
+      "wrong_cube_displacement_m": 8.20551337933381e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.8588429689407349,
+          0.9475331026680616,
+          1.0
+        ],
+        [
+          0.91499924659729,
+          0.9960068756220292,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 195,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04098045802881201,
+      "wrong_cube_displacement_m": 8.797132877918476e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.4251452088356018,
+          0.9675405014236018,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 196,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 54,
+      "target_progress_m": 0.04056373846463452,
+      "wrong_cube_displacement_m": 2.871275055070771e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7591462135314941,
+          0.9567446256125415,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 197,
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 56,
+      "target_progress_m": 0.04016188376358333,
+      "wrong_cube_displacement_m": 3.366085468511793e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          -1.0
+        ]
+      ]
+    },
+    {
+      "episode": 198,
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 53,
+      "target_progress_m": 0.04132577913065079,
+      "wrong_cube_displacement_m": 5.812969396827732e-17,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.9177761077880859,
+          0.980208899614946,
+          1.0
+        ],
+        [
+          0.913330078125,
+          0.9966427380183958,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 199,
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "success": true,
+      "episode_steps": 51,
+      "target_progress_m": 0.04067192173035484,
+      "wrong_cube_displacement_m": 8.654187295084972e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.44616174697875977,
+          0.9891404264113483,
+          1.0
+        ]
+      ]
+    },
+    {
+      "episode": 200,
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "success": true,
+      "episode_steps": 59,
+      "target_progress_m": 0.04046367859830304,
+      "wrong_cube_displacement_m": 3.6907026895458424e-10,
+      "safety_fault": null,
+      "action_min_mean_max_by_component": [
+        [
+          0.7707927227020264,
+          0.9705291693493471,
+          1.0
+        ],
+        [
+          -1.0,
+          -0.8893192309444233,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "versions": {
+    "stable_baselines3": "2.7.1",
+    "gymnasium": "1.2.2",
+    "mujoco": "3.11.0",
+    "numpy": "2.2.6"
+  },
+  "hardware_motion_commanded": false,
+  "claim_boundary": "Simulation compatibility reevaluation only. Nominal D405 intrinsics and the wrist transform remain uncalibrated for physical hardware."
+}

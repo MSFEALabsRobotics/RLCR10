@@ -1,0 +1,117 @@
+{
+  "verification_level": "CR10_2F85_SIM_TELEMETRY_BOUNDED_PUSH_ACTION",
+  "pack2_regression_level": "CR10_2F85_TABLE_GRAVITY_SUPPORTED_PUSH",
+  "telemetry": {
+    "schema_version": "cr10_2f85_pack3_sim_telemetry_v1",
+    "sample_count": 3570,
+    "gripper_actuator_force_scalar_peak_abs_model_units": 1.2279535527433154,
+    "left_driver_joint_torque_peak_abs_Nm": 0.6139767763716577,
+    "right_driver_joint_torque_peak_abs_Nm": 0.6139767763716577,
+    "gripper_cube_peak_force_norm_N": 2.4931205543459467,
+    "cube_table_peak_force_norm_N": 1.733433981239506
+  },
+  "action_contract": {
+    "schema_version": "cr10_2f85_pack3_bounded_push_action_v1",
+    "normalized_action": {
+      "shape": [
+        2
+      ],
+      "bounds": [
+        -1.0,
+        1.0
+      ],
+      "components": [
+        "push_increment_along_validated_segment",
+        "gripper_position_command"
+      ]
+    },
+    "push_mapping": {
+      "max_abs_increment_m": 0.002,
+      "segment_min_m": 0.0,
+      "segment_max_m": 0.08
+    },
+    "gripper_mapping": {
+      "normalized_open": -1.0,
+      "normalized_closed": 1.0,
+      "actuator_ctrlrange": [
+        0.0,
+        255.0
+      ],
+      "meaning": "position-like closure target, not force"
+    },
+    "admission_gates": [
+      "shape and finite values",
+      "normalized bounds",
+      "validated push segment",
+      "DLS IK residuals",
+      "scaled Jacobian minimum singular value",
+      "joint-limit margin",
+      "per-command joint-target delta derived from configured speed cap"
+    ],
+    "claim_boundary": "Simulation action admission only. This does not establish real-robot workspace, collision safety, motor velocity tracking, or hardware safety."
+  },
+  "action_gate": {
+    "valid_step": {
+      "accepted": true,
+      "code": "ACCEPTED",
+      "detail": "bounded simulation task action admitted",
+      "normalized_action": [
+        1.0,
+        1.0
+      ],
+      "start_segment_m": 0.0,
+      "target_segment_m": 0.002,
+      "delta_push_m": 0.002,
+      "gripper_command": 255.0,
+      "target_tcp_world_m": [
+        0.4379414666002289,
+        -0.4582503331110726,
+        1.3323257881789512
+      ],
+      "q_target_rad": [
+        -0.005369864767111604,
+        -0.6984785612887745,
+        0.7830302400803513,
+        -0.08472015118739443,
+        0.35436817895384404,
+        0.0001567507432472118
+      ],
+      "ik_position_error_m": 4.413632108015563e-05,
+      "ik_rotation_error_rad": 8.936799360843182e-05,
+      "scaled_jacobian_sigma_min": 0.08370404245931445,
+      "max_joint_target_delta_rad": 0.005369864767111604
+    },
+    "open_mapping_command": 0.0,
+    "closed_mapping_command": 255.0,
+    "rejection_codes": {
+      "segment_underflow": "SEGMENT_BOUND",
+      "normalized_overflow": "ACTION_OUT_OF_RANGE",
+      "nonfinite": "NONFINITE_ACTION",
+      "wrong_shape": "INVALID_ACTION_SHAPE",
+      "segment_overflow": "SEGMENT_BOUND"
+    },
+    "planner_wrote_mujoco_state": false
+  },
+  "hardware_motion_commanded": false,
+  "claims": {
+    "validated": [
+      "read-only access to finite MuJoCo gripper actuator outputs",
+      "read-only cube/table and gripper/cube contact wrenches",
+      "explicit contact/world-frame conversion contract",
+      "normalized two-component simulation action bounds",
+      "exact 0--80 mm Pack 2 segment admission",
+      "IK, Jacobian, joint-margin, and joint-target-delta admission gates",
+      "fail-closed rejection of malformed, nonfinite, and out-of-bound actions"
+    ],
+    "not_validated": [
+      "physical fingertip force or torque",
+      "physical force/torque sensor behavior",
+      "physical gripper current-to-force calibration",
+      "direct force control",
+      "real CR10 workspace or collision safety",
+      "real motor velocity tracking",
+      "hardware motion",
+      "RL policy performance"
+    ]
+  }
+}

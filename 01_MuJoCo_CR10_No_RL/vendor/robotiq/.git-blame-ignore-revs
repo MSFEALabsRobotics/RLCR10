@@ -1,0 +1,10 @@
+# Revisions to ignore in `git blame` — bulk, mechanical reformatting commits
+# with no functional change. GitHub honors this file automatically; locally run:
+#
+#     git config blame.ignoreRevsFile .git-blame-ignore-revs
+#
+# clang-format the whole repo to the single root .clang-format
+7b04c24f3fd8fd21a700183e8b5a4c3c65c4a036
+
+# repo-wide black + whitespace + spelling reflow
+052f21dec36bbd0d02d875c408c1ee2cf5be9cb9

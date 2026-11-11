@@ -1,0 +1,305 @@
+{
+  "verification_level": "CR10_2F85_GYMNASIUM_FORWARD_ONLY_FIXED_GRIP_PUSH_BASELINE",
+  "base_environment_level": "CR10_2F85_GYMNASIUM_TABLETOP_PUSH_ENV",
+  "pack3_regression_level": "CR10_2F85_SIM_TELEMETRY_BOUNDED_PUSH_ACTION",
+  "gymnasium": {
+    "version": "1.2.2",
+    "check_env_passed": true,
+    "base_environment_id": "CR10-2F85-TabletopPush-v0",
+    "training_environment_id": "CR10-2F85-TabletopPushForwardOnly-v0",
+    "gym_make_passed": true
+  },
+  "contract": {
+    "environment_id": "CR10-2F85-TabletopPushForwardOnly-v0",
+    "observation_schema_version": "cr10_2f85_pack4_state_observation_v1",
+    "observation_components": [
+      "tcp_actual_segment_m",
+      "tcp_commanded_segment_m",
+      "cube_progress_along_goal_m",
+      "cube_goal_remaining_m",
+      "cube_minus_tcp_along_m",
+      "cube_minus_tcp_lateral_m",
+      "cube_minus_tcp_vertical_m",
+      "cube_linear_velocity_along_m_s",
+      "cube_linear_velocity_lateral_m_s",
+      "cube_linear_velocity_vertical_m_s",
+      "gripper_position_command_normalized",
+      "gripper_cube_contact",
+      "cube_table_contact"
+    ],
+    "observation_shape": [
+      13
+    ],
+    "observation_units": "SI values plus one normalized command and two binary contacts",
+    "action": {
+      "schema_version": "cr10_2f85_pack4_forward_only_fixed_grip_push_action_v1",
+      "shape": [
+        1
+      ],
+      "bounds": [
+        -1.0,
+        1.0
+      ],
+      "component": "forward_push_intent_along_validated_segment",
+      "mapping_to_pack3": "[a] -> [(a+1)/2, +1]",
+      "mapped_pack3_push_range": [
+        0.0,
+        1.0
+      ],
+      "physical_increment_range_m": [
+        0.0,
+        0.002
+      ],
+      "fixed_gripper_normalized": 1.0,
+      "fixed_gripper_command_0_to_255": 255.0,
+      "reason": "Gripper closure is a known push-task precondition, and this task has only one useful direction. The adapter removes backward oscillation without changing the underlying signed Pack 3 interface."
+    },
+    "cube_goal_displacement_m": 0.04,
+    "max_episode_steps": 50,
+    "reward": {
+      "tcp_progress": "0.1 * delta actual TCP segment / full push segment",
+      "progress": "delta cube progress / cube goal displacement",
+      "success_bonus": 1.0,
+      "invalid_action_penalty": -0.05,
+      "fault_penalty": -1.0,
+      "force_used_in_reward": false
+    },
+    "reset_rest_gate": {
+      "table_contact_substeps": 751,
+      "rest_height_error_m": 0.00010775542207941413,
+      "rest_speed_m_s": 1.3620680276894641e-11,
+      "max_cube_table_penetration_m": 0.00010775542214918471
+    },
+    "reset_randomization": false,
+    "image_observation": false,
+    "hardware_interface": false,
+    "base_environment_id": "CR10-2F85-TabletopPush-v0",
+    "underlying_pack3_action": {
+      "schema_version": "cr10_2f85_pack3_bounded_push_action_v1",
+      "normalized_action": {
+        "shape": [
+          2
+        ],
+        "bounds": [
+          -1.0,
+          1.0
+        ],
+        "components": [
+          "push_increment_along_validated_segment",
+          "gripper_position_command"
+        ]
+      },
+      "push_mapping": {
+        "max_abs_increment_m": 0.002,
+        "segment_min_m": 0.0,
+        "segment_max_m": 0.08
+      },
+      "gripper_mapping": {
+        "normalized_open": -1.0,
+        "normalized_closed": 1.0,
+        "actuator_ctrlrange": [
+          0.0,
+          255.0
+        ],
+        "meaning": "position-like closure target, not force"
+      },
+      "admission_gates": [
+        "shape and finite values",
+        "normalized bounds",
+        "validated push segment",
+        "DLS IK residuals",
+        "scaled Jacobian minimum singular value",
+        "joint-limit margin",
+        "per-command joint-target delta derived from configured speed cap"
+      ],
+      "claim_boundary": "Simulation action admission only. This does not establish real-robot workspace, collision safety, motor velocity tracking, or hardware safety."
+    }
+  },
+  "base_contract": {
+    "environment_id": "CR10-2F85-TabletopPush-v0",
+    "observation_schema_version": "cr10_2f85_pack4_state_observation_v1",
+    "observation_components": [
+      "tcp_actual_segment_m",
+      "tcp_commanded_segment_m",
+      "cube_progress_along_goal_m",
+      "cube_goal_remaining_m",
+      "cube_minus_tcp_along_m",
+      "cube_minus_tcp_lateral_m",
+      "cube_minus_tcp_vertical_m",
+      "cube_linear_velocity_along_m_s",
+      "cube_linear_velocity_lateral_m_s",
+      "cube_linear_velocity_vertical_m_s",
+      "gripper_position_command_normalized",
+      "gripper_cube_contact",
+      "cube_table_contact"
+    ],
+    "observation_shape": [
+      13
+    ],
+    "observation_units": "SI values plus one normalized command and two binary contacts",
+    "action": {
+      "schema_version": "cr10_2f85_pack3_bounded_push_action_v1",
+      "normalized_action": {
+        "shape": [
+          2
+        ],
+        "bounds": [
+          -1.0,
+          1.0
+        ],
+        "components": [
+          "push_increment_along_validated_segment",
+          "gripper_position_command"
+        ]
+      },
+      "push_mapping": {
+        "max_abs_increment_m": 0.002,
+        "segment_min_m": 0.0,
+        "segment_max_m": 0.08
+      },
+      "gripper_mapping": {
+        "normalized_open": -1.0,
+        "normalized_closed": 1.0,
+        "actuator_ctrlrange": [
+          0.0,
+          255.0
+        ],
+        "meaning": "position-like closure target, not force"
+      },
+      "admission_gates": [
+        "shape and finite values",
+        "normalized bounds",
+        "validated push segment",
+        "DLS IK residuals",
+        "scaled Jacobian minimum singular value",
+        "joint-limit margin",
+        "per-command joint-target delta derived from configured speed cap"
+      ],
+      "claim_boundary": "Simulation action admission only. This does not establish real-robot workspace, collision safety, motor velocity tracking, or hardware safety."
+    },
+    "cube_goal_displacement_m": 0.04,
+    "max_episode_steps": 50,
+    "reward": {
+      "tcp_progress": "0.1 * delta actual TCP segment / full push segment",
+      "progress": "delta cube progress / cube goal displacement",
+      "success_bonus": 1.0,
+      "invalid_action_penalty": -0.05,
+      "fault_penalty": -1.0,
+      "force_used_in_reward": false
+    },
+    "reset_rest_gate": {
+      "table_contact_substeps": 751,
+      "rest_height_error_m": 0.00010775542207941413,
+      "rest_speed_m_s": 1.3620680276894641e-11,
+      "max_cube_table_penetration_m": 0.00010775542214918471
+    },
+    "reset_randomization": false,
+    "image_observation": false,
+    "hardware_interface": false
+  },
+  "deterministic_reset": {
+    "same_seed_observation_exactly_equal": true,
+    "randomization_enabled": false,
+    "rest_gate": {
+      "table_contact_substeps": 751,
+      "rest_height_error_m": 0.00010775542207941413,
+      "rest_speed_m_s": 1.3620680276894641e-11,
+      "max_cube_table_penetration_m": 0.00010775542214918471
+    }
+  },
+  "fail_closed_boundary_action": {
+    "rejection_code": "SEGMENT_BOUND",
+    "reward": -0.05,
+    "simulation_substeps": 0,
+    "wrote_mujoco_state": false
+  },
+  "precontact_approach_signal": {
+    "action": [
+      1.0,
+      1.0
+    ],
+    "tcp_progress_reward": 0.0009720440105900811,
+    "total_reward": 0.0009720440105900845,
+    "force_used_in_reward": false
+  },
+  "base_reference_policy": {
+    "policy": "constant normalized action [1, 1]",
+    "accepted_actions": 36,
+    "episode_steps": 36,
+    "simulation_substeps": 2534,
+    "cube_progress_m": 0.04078107704225384,
+    "goal_displacement_m": 0.04,
+    "total_reward": 2.1020165823844277,
+    "gripper_cube_peak_force_norm_N": 2.493016401013134,
+    "cube_table_peak_force_norm_N": 1.7337741049258477,
+    "success": true,
+    "safety_fault": null,
+    "robot_table_contact_geoms": []
+  },
+  "forward_only_fixed_grip_adapter": {
+    "policy_action": "[a] in [-1,1]",
+    "mapped_pack3_action": "[a] -> [(a+1)/2,+1]",
+    "mapped_pack3_push_range": [
+      0.0,
+      1.0
+    ],
+    "physical_increment_range_m": [
+      0.0,
+      0.002
+    ],
+    "fixed_gripper_command_0_to_255": 255.0,
+    "invalid_action_rejection_code": "POLICY_ACTION_OUT_OF_RANGE",
+    "invalid_action_wrote_state": false,
+    "minimum_policy_action_mapping": [
+      0.0,
+      1.0
+    ]
+  },
+  "neutral_policy_diagnostic": {
+    "policy": "constant policy action [0]",
+    "mapped_pack3_action": [
+      0.5,
+      1.0
+    ],
+    "episode_steps": 50,
+    "gripper_contact_actions": 21,
+    "cube_progress_m": 0.020629853107803034,
+    "cube_progress_reward": 0.5070358525954795,
+    "total_reward": 0.5669190153049555,
+    "success": false,
+    "safety_fault": null
+  },
+  "reference_policy": {
+    "policy": "constant fixed-grip policy action [1]",
+    "accepted_actions": 36,
+    "episode_steps": 36,
+    "cube_progress_m": 0.04078107704225384,
+    "goal_displacement_m": 0.04,
+    "total_reward": 2.1020165823844277,
+    "success": true,
+    "safety_fault": null,
+    "robot_table_contact_geoms": []
+  },
+  "hardware_motion_commanded": false,
+  "claims": {
+    "validated": [
+      "Gymnasium reset/step API and declared spaces",
+      "deterministic state-based supported-cube reset",
+      "unchanged Pack 3 bounded action admission",
+      "fail-closed boundary rejection without MuJoCo state writes",
+      "finite progress-based reward with no force threshold",
+      "scripted reachability of the explicit tabletop-push goal",
+      "one-component training adapter maps every admitted policy action to the verified closed gripper command",
+      "affine policy mapping removes backward motion while preserving the Pack 3 2 mm maximum",
+      "neutral policy action exposes gripper contact, positive cube progress, and positive cube-task reward"
+    ],
+    "not_validated": [
+      "learned-policy performance",
+      "camera observations or vision policy",
+      "domain randomization",
+      "physical force calibration or force control",
+      "ROS 2 hardware execution",
+      "sim-to-real transfer"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cr10-2f85-lab-pack5"
+version = "0.2.0"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy==2.2.6",
+  "mujoco==3.11.0",
+  "gymnasium==1.2.2",
+  "pillow==11.3.0",
+]
+
+[project.optional-dependencies]
+rl = [
+  "stable-baselines3==2.7.1",
+  "torch==2.7.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cr10_2f85_lab*"]

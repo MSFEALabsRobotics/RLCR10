@@ -1,0 +1,17 @@
+{
+  "simulation_source": "/home/marwah/Downloads/CR10_D405_PLATE_ColorPush_SIM_v0_3",
+  "physical_source": "/home/marwah/Downloads/CR10_D405_PLATE_PPO_OFFLINE_READY_v0_3",
+  "new_policy_sha256": "b6a8cf95662c0f2c8cd28b680facf9da890d0e81426f38432316a180614b2393",
+  "new_vecnormalize_sha256": "102980b65d704f45aadd7fe56d4c9ed8a827089b207f694be8c3faa33afb1fb7",
+  "replay_script_source": "project file",
+  "replay_script_sha256": "ac0a34c6347787e858ec70c7f349be0a1c621133f34d9f30611c3ba22ad7408b",
+  "physical_checkpoint_copies": 1,
+  "physical_normalizer_copies": 1,
+  "hardware_additional_scripts": [
+    "cr10_live_d405_ppo_one_supervised_step.py",
+    "cr10_d405_continuous_ppo_guarded.py",
+    "live_d405_frozen_ppo_preview_v05.py"
+  ],
+  "offline_assets_included": false,
+  "hardware_motion_verified": false
+}

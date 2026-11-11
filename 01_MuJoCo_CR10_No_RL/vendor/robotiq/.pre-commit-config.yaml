@@ -1,0 +1,81 @@
+# Repo-wide pre-commit hooks — the single formatting/linting config for the repo.
+#
+# Style/lint is centralized here (previously grippers/ carried its own copy):
+#   - clang-format  : C/C++, against the single root .clang-format (shared Robotiq C++ style)
+#   - black/flake8  : Python (flake8 config in the root .flake8)
+#   - codespell     : spelling
+#   - standard hooks: whitespace/eol/yaml/etc.
+#
+# Scope is an explicit allow-list (top-level `files`) of the trees we own; the
+# extern/tactile_sensors submodule is intentionally excluded (not ours to lint).
+#
+# To use locally:
+#
+#     pre-commit run -a
+#
+# Or install the git hook:
+#
+#     pre-commit install
+#
+# clang-format is pinned to v19.1.1 to match the clang-format-19 mandated by the
+# Robotiq C++ conventions.
+
+# Only lint the trees we own; keep the extern/ submodule out.
+files: '^(grippers/|robotiq_tsf/|docker/|\.github/|[^/]+$)'
+
+repos:
+  # Standard hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+        exclude: \.(stl|dae)$
+      - id: check-ast
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+        args: ['--unsafe']  # Fixes errors parsing custom YAML constructors like ur_description's !degrees
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+      - id: fix-byte-order-marker
+
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.2.0
+    hooks:
+    - id: flake8
+      # configured in the root .flake8 file
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell
+        args: ['--write-changes', '-L', 'atleast,copys']  # comma-separated words codespell should ignore; copys = the Dockerfile COPY instruction (plural).
+        exclude: \.(svg|pyc|stl|dae|lock)$
+
+  - repo: https://github.com/pre-commit/mirrors-clang-format
+    rev: v19.1.1
+    hooks:
+      - id: clang-format
+        files: \.(c|cc|cxx|cpp|h|hh|hpp|hxx|ipp)$
+        # -i arg is included by default by the hook
+        args: ["-fallback-style=none"]
+
+  # The repo is versioned as a whole; VERSION is the authoritative copy and
+  # every package.xml has to agree with it. See dev/version.py.
+  - repo: local
+    hooks:
+      - id: version-consistency
+        name: package.xml versions match VERSION
+        entry: dev/version.py --check
+        language: system
+        files: '(^VERSION$|package\.xml$)'
+        pass_filenames: false

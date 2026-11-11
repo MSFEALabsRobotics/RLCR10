@@ -1,0 +1,13 @@
+{
+  "task": "CR10 plate RGB-D color push, compact observations",
+  "architecture": "PPO MlpPolicy, action (2,), observation (12,), max XY step 0.002m",
+  "observation_schema": "cr10_2f85_pack5_rgbd_color_features_v1",
+  "checkpoint_provenance": "Uploaded CR10_plate_policy_for_hardware.zip",
+  "files_sha256": {
+    "plate_policy_heldout_eval.json": "952bbb22209988813c9d8861e5851a3ab37a315def05e4887fb1df043c67d743",
+    "plate_color_ppo_metadata.json": "c413d160235136f295eaef1f5115bd79b0ec56d7d66e9935c4fe7745124fcdff",
+    "plate_color_ppo_vecnormalize.pkl": "102980b65d704f45aadd7fe56d4c9ed8a827089b207f694be8c3faa33afb1fb7",
+    "plate_color_ppo.zip": "b6a8cf95662c0f2c8cd28b680facf9da890d0e81426f38432316a180614b2393"
+  },
+  "verified_execution_here": "Static file, metadata, integration unit tests only; no D405, ROS2, real CR10, or SB3 runtime in this environment"
+}

@@ -1,0 +1,97 @@
+{
+  "_note": "PLATE PPO v0.2: SENSOR/INFERENCE PREVIEW ONLY. NO MOTION COMMANDS exposed by run.py. All transforms/axes/tool and collision protection need physical verification.",
+  "camera": {
+    "resolution_px": [
+      1280,
+      720
+    ],
+    "fps": 30,
+    "serial": null,
+    "policy_resolution_px": [
+      128,
+      72
+    ],
+    "min_valid_depth_m": 0.07,
+    "max_valid_depth_m": 0.5,
+    "min_mask_pixels": 12,
+    "max_capture_age_s": 0.4,
+    "colors": {
+      "red": {
+        "hue_ranges_0_to_1": [
+          [
+            0.0,
+            0.055
+          ],
+          [
+            0.94,
+            1.0
+          ]
+        ],
+        "minimum_saturation": 0.35,
+        "minimum_value": 0.04
+      },
+      "blue": {
+        "hue_ranges_0_to_1": [
+          [
+            0.54,
+            0.75
+          ]
+        ],
+        "minimum_saturation": 0.35,
+        "minimum_value": 0.04
+      }
+    }
+  },
+  "robot": {
+    "user_frame": 0,
+    "tool_frame": null,
+    "service_prefix": "/dobot_bringup_ros2/srv",
+    "controller_mode_idle": 5,
+    "max_tcp_tracking_error_m": 0.0015,
+    "max_joint_delta_deg": 2.0,
+    "joint_limits_deg": null,
+    "joint_margin_deg": 5.0,
+    "linear_speed_mm_s": 5,
+    "acceleration_percent": 5,
+    "move_timeout_s": 5.0
+  },
+  "calibration": {
+    "approved": false,
+    "baseline_tcp_pose_mm_deg": null,
+    "T_base_camera_at_baseline": null,
+    "max_translation_deviation_from_baseline_m": 0.2,
+    "max_orientation_change_deg": 0.5,
+    "max_calibration_rmse_m": 0.005,
+    "holdout_rmse_m": null
+  },
+  "task": {
+    "forward_axis_base": null,
+    "lateral_axis_base": null,
+    "forward_bounds_m": [
+      0,
+      0.19
+    ],
+    "lateral_bounds_m": [
+      -0.125,
+      0.125
+    ],
+    "max_step_m": 0.002,
+    "max_steps": 155,
+    "goal_displacement_m": 0.04,
+    "max_wrong_displacement_m": 0.008,
+    "require_both_detections": true,
+    "max_detection_jump_m": 0.025
+  },
+  "safety": {
+    "workspace_min_base_m": null,
+    "workspace_max_base_m": null,
+    "full_robot_collision_model_validated": false,
+    "pusher_plate_box_clearance_validated": false,
+    "operator_has_verified_robot_protection": false,
+    "real_motion_authorized": false,
+    "max_total_tcp_travel_m": 0.11,
+    "pusher_lateral_width_m": 0.089,
+    "box_lateral_width_m": null,
+    "extra_object_clearance_m": 0.005
+  }
+}

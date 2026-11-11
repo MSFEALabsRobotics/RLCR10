@@ -1,0 +1,245 @@
+{
+  "verification_level": "CR10_2F85_RGBD_COLOR_TARGET_PLANAR_PUSH_ENV",
+  "pack5_camera_regression_level": "CR10_2F85_D405_WRIST_RGBD_RENDER_GATE",
+  "gymnasium": {
+    "version": "1.2.2",
+    "environment_id": "CR10-2F85-RGBDColorTargetPush-v0",
+    "check_env_passed": true,
+    "gym_make_passed": true
+  },
+  "contract": {
+    "environment_id": "CR10-2F85-RGBDColorTargetPush-v0",
+    "observation_schema_version": "cr10_2f85_pack5_rgbd_color_features_v1",
+    "observation_components": [
+      "tcp_command_forward_m",
+      "tcp_command_lateral_m",
+      "red_surface_minus_tcp_forward_m",
+      "red_surface_minus_tcp_lateral_m",
+      "red_surface_depth_m",
+      "red_visible",
+      "blue_surface_minus_tcp_forward_m",
+      "blue_surface_minus_tcp_lateral_m",
+      "blue_surface_depth_m",
+      "blue_visible",
+      "requested_red",
+      "requested_blue"
+    ],
+    "observation_shape": [
+      12
+    ],
+    "perception": {
+      "rgb": "configured HSV masks identify red and blue",
+      "depth": "aligned metric depth back-projects visible mask pixels",
+      "policy_pixels": [
+        128,
+        72
+      ],
+      "policy_receives_raw_images": false,
+      "policy_receives_compact_rgbd_features": true,
+      "backend": "MUJOCO_OPENGL_RGB_PLUS_METRIC_DEPTH"
+    },
+    "target_command": "one-hot requested color: red or blue",
+    "action": {
+      "schema_version": "cr10_2f85_pack5_bounded_planar_action_v1",
+      "normalized_action": {
+        "shape": [
+          2
+        ],
+        "bounds": [
+          -1.0,
+          1.0
+        ],
+        "components": [
+          "tcp_forward_increment",
+          "tcp_lateral_increment"
+        ]
+      },
+      "mapping": "a is radially saturated to the unit disk, then multiplied by max_step_m",
+      "maximum_euclidean_increment_m": 0.002,
+      "forward_bounds_m": [
+        0.0,
+        0.105
+      ],
+      "lateral_bounds_m": [
+        -0.075,
+        0.075
+      ],
+      "fixed_height": true,
+      "fixed_orientation": true,
+      "fixed_gripper_command": 255.0,
+      "admission_gates": [
+        "shape, finite values, and normalized bounds",
+        "planar task rectangle",
+        "DLS IK residuals",
+        "scaled Jacobian minimum singular value",
+        "joint-limit margin",
+        "per-command joint-target speed cap"
+      ],
+      "claim_boundary": "Simulation-only action admission; not a physical collision, velocity, force, or hardware safety certificate."
+    },
+    "fixed_gripper_normalized": 1.0,
+    "goal_displacement_m": 0.04,
+    "maximum_wrong_cube_displacement_m": 0.008,
+    "max_episode_steps": 80,
+    "reward": {
+      "approach_weight": 0.02,
+      "target_progress": "delta target progress / goal displacement",
+      "wrong_cube_motion_penalty_weight": 1.0,
+      "success_bonus": 1.0,
+      "invalid_action_penalty": -0.05,
+      "fault_penalty": -1.0,
+      "force_used_in_reward": false
+    },
+    "reset_randomization": [
+      "requested target color",
+      "red/blue side assignment",
+      "bounded lateral jitter"
+    ],
+    "hardware_interface": false,
+    "claim_boundary": "Simulation-only color-conditioned RGB-D perception and bounded planar push task. RGB HSV masks select red/blue visible surfaces, aligned metric depth back-projects those pixels, and PPO receives compact perceived features rather than raw images. This is not end-to-end visual RL, physical color calibration, hand-eye calibration, force control, or sim-to-real validation."
+  },
+  "diagnostic_cpu_rgbd": false,
+  "deterministic_reset": {
+    "same_seed_observation_exactly_equal": true,
+    "same_seed_rgb_exactly_equal": true,
+    "same_seed_depth_exactly_equal": true
+  },
+  "rgbd_perception": {
+    "resolution_px": [
+      128,
+      72
+    ],
+    "red": {
+      "color": "red",
+      "mask_pixels": 341,
+      "center_pixel_uv": [
+        73.0,
+        36.0
+      ],
+      "median_depth_m": 0.20173586905002594,
+      "visible_surface_point_camera_xyz_m": [
+        0.026847595852183083,
+        0.0,
+        -0.20173586905002594
+      ],
+      "visible_surface_point_world_xyz_m": [
+        0.42442932066648104,
+        -0.4996232960013727,
+        1.3417447635753705
+      ]
+    },
+    "blue": {
+      "color": "blue",
+      "mask_pixels": 377,
+      "center_pixel_uv": [
+        53.0,
+        36.0
+      ],
+      "median_depth_m": 0.20355699956417084,
+      "visible_surface_point_camera_xyz_m": [
+        -0.032291434074455456,
+        0.0,
+        -0.20355699956417084
+      ],
+      "visible_surface_point_world_xyz_m": [
+        0.48055844323430547,
+        -0.4809258780035471,
+        1.340926511172911
+      ]
+    },
+    "lateral_error_m": {
+      "red": 0.004701732732517859,
+      "blue": 0.0006817721245849853
+    },
+    "target_command_changes_scene": false
+  },
+  "fail_closed_invalid_action": {
+    "rejection_code": "ACTION_OUT_OF_RANGE",
+    "simulation_substeps": 0,
+    "wrote_mujoco_state": false
+  },
+  "scripted_reference_episodes": [
+    {
+      "target_color": "red",
+      "red_lateral_sign": -1,
+      "episode_steps": 61,
+      "accepted_actions": 61,
+      "target_progress_m": 0.04031716461316693,
+      "maximum_wrong_cube_displacement_m": 3.2035550422679632e-19,
+      "total_reward": 2.376372971993739,
+      "success": true,
+      "safety_fault": null,
+      "reset_color_mask_pixels": {
+        "red": 352,
+        "blue": 390
+      }
+    },
+    {
+      "target_color": "red",
+      "red_lateral_sign": 1,
+      "episode_steps": 58,
+      "accepted_actions": 58,
+      "target_progress_m": 0.04147136068541406,
+      "maximum_wrong_cube_displacement_m": 3.2923529432263503e-19,
+      "total_reward": 2.4316490023768322,
+      "success": true,
+      "safety_fault": null,
+      "reset_color_mask_pixels": {
+        "red": 399,
+        "blue": 337
+      }
+    },
+    {
+      "target_color": "blue",
+      "red_lateral_sign": -1,
+      "episode_steps": 68,
+      "accepted_actions": 68,
+      "target_progress_m": 0.04176910053714485,
+      "maximum_wrong_cube_displacement_m": 3.5314242150373925e-19,
+      "total_reward": 2.4330778572626013,
+      "success": true,
+      "safety_fault": null,
+      "reset_color_mask_pixels": {
+        "red": 352,
+        "blue": 390
+      }
+    },
+    {
+      "target_color": "blue",
+      "red_lateral_sign": 1,
+      "episode_steps": 55,
+      "accepted_actions": 55,
+      "target_progress_m": 0.04160238445752509,
+      "maximum_wrong_cube_displacement_m": 2.9964041597107214e-10,
+      "total_reward": 2.4174479463037426,
+      "success": true,
+      "safety_fault": null,
+      "reset_color_mask_pixels": {
+        "red": 399,
+        "blue": 337
+      }
+    }
+  ],
+  "all_target_and_side_combinations_succeeded": true,
+  "hardware_motion_commanded": false,
+  "claims": {
+    "validated": [
+      "actual low-resolution MuJoCo RGB and aligned metric depth feed the observation extractor",
+      "HSV masks distinguish configured red and blue cubes",
+      "metric depth and scaled D405 intrinsics produce wrist-relative visible-surface points",
+      "the requested-color one-hot command selects the task without changing the scene",
+      "bounded planar actions have a 2 mm maximum Euclidean increment and a fixed gripper command",
+      "same-seed RGB, depth, features, and reset layout are deterministic",
+      "scripted observation-only references push red and blue from both side assignments",
+      "wrong-cube motion, cube/table support, and robot/table contact are gated"
+    ],
+    "not_validated": [
+      "learned-policy performance",
+      "raw-image or end-to-end visual RL",
+      "physical HSV thresholds or illumination robustness",
+      "physical wrist-camera hand-eye calibration",
+      "RealSense depth noise, holes, latency, or distortion",
+      "physical force control, ROS 2 execution, or sim-to-real transfer"
+    ]
+  }
+}

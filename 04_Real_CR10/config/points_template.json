@@ -1,0 +1,5 @@
+{
+  "_instructions": "Replace empty arrays with >=4 genuine, matching 3D points at the exact same camera baseline pose. Units: metres. Do not use any made-up correspondences.",
+  "camera_optical_m": [],
+  "robot_base_m": []
+}
